@@ -82,11 +82,11 @@ export default function Home() {
 <div className="absolute -top-8 -right-8 bg-cyan-brutal border-[5px] border-black p-3 font-display font-black text-2xl rotate-[20deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform cursor-crosshair">CAPABILITIES</div>
 <h3 className="font-display text-[40px] font-black border-b-[6px] border-black pb-4 mb-8 uppercase bg-white p-2 inline-block">Skills</h3>
 <ul className="flex flex-col gap-6 font-display font-bold text-xl uppercase bg-white p-6 border-[4px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-<li className="flex items-center justify-between border-b-[4px] border-black border-dotted pb-4"><span>Full Stack (Next.js/Go)</span> <span className="font-black text-2xl bg-primary-fixed px-3 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">95%</span></li>
-<li className="flex items-center justify-between border-b-[4px] border-black border-dotted pb-4"><span>IT Infrastructure</span> <span className="font-black text-2xl bg-secondary-fixed-dim px-3 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">90%</span></li>
-<li className="flex items-center justify-between border-b-[4px] border-black border-dotted pb-4"><span>Agentic AI &amp; LLMs</span> <span className="font-black text-2xl bg-cyan-brutal px-3 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">95%</span></li>
-<li className="flex items-center justify-between border-b-[4px] border-black border-dotted pb-4"><span>DB (PostgreSQL)</span> <span className="font-black text-2xl bg-lime-brutal px-3 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">88%</span></li>
-<li className="flex items-center justify-between pb-2"><span>Network/Support</span> <span className="font-black text-2xl bg-white px-3 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">90%</span></li>
+<li className="border-b-[4px] border-black border-dotted pb-4">Full Stack (Next.js/Go)</li>
+<li className="border-b-[4px] border-black border-dotted pb-4">IT Infrastructure</li>
+<li className="border-b-[4px] border-black border-dotted pb-4">Agentic AI &amp; LLMs</li>
+<li className="border-b-[4px] border-black border-dotted pb-4">DB (PostgreSQL)</li>
+<li className="pb-2">Network/Support</li>
 </ul>
 </div>
 {/*  Experience Box  */}
