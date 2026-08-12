@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
 
 export default function Home() {
   return (
@@ -9,24 +10,8 @@ export default function Home() {
 <div className="fixed bottom-40 left-10 w-32 h-32 rounded-full bg-cyan-brutal border-[6px] border-black -z-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center"><span className="font-display font-black text-4xl rotate-45">*</span></div>
 <div className="fixed top-1/2 left-4 w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[70px] border-b-lime-brutal -rotate-45 -z-10 filter drop-shadow-[6px_6px_0px_rgba(0,0,0,1)]"></div>
 <div className="fixed bottom-20 right-20 w-16 h-16 bg-primary-fixed border-[4px] border-black rotate-[30deg] -z-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"></div>
-{/*  TopNavBar  */}
-<header className="flex justify-between items-center w-full px-margin-desktop py-4 sticky top-0 z-50 bg-background dark:bg-inverse-surface border-b-[6px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-<div className="font-display text-headline-md font-black text-on-surface dark:text-inverse-on-surface uppercase tracking-tighter bg-primary-fixed px-3 py-1 border-[4px] border-black rotate-[-3deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            NPL DEV
-        </div>
-<nav className="hidden md:flex gap-gutter items-center bg-cyan-brutal border-[4px] border-black px-8 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[2deg]">
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#about">About</a>
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#projects">Projects</a>
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#contact">Contact</a>
-</nav>
-<a href="#contact" className="hidden md:block bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] px-8 py-3 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all rotate-[-4deg] uppercase">
-            Hire Me
-        </a>
-{/*  Mobile Menu Icon (Placeholder)  */}
-<button className="md:hidden border-[4px] border-black p-3 bg-primary-fixed shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-<span className="material-symbols-outlined font-bold text-3xl" data-icon="menu">menu</span>
-</button>
-</header>
+{/*  TopNavBar (Client Component)  */}
+<Navigation />
 <main className="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-20 gap-32 max-w-7xl mx-auto w-full">
 {/*  Hero Section  */}
 <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative">
