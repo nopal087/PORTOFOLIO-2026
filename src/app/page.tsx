@@ -502,9 +502,9 @@ export default function Home() {
 </div>
 <div className="flex flex-col gap-6">
 <h4 className="font-display font-black text-3xl text-secondary-fixed-dim uppercase border-b-[4px] border-secondary-fixed-dim pb-4 inline-block">Socials</h4>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="#">Twitter <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="#">GitHub <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="#">LinkedIn <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="https://github.com/nopal087" target="_blank" rel="noopener noreferrer">GitHub <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3" href="https://www.linkedin.com/in/muhammad-naufal-faruq" target="_blank" rel="noopener noreferrer">LinkedIn <span className="material-symbols-outlined text-xl">arrow_outward</span></a>
 </div>
 </div>
 </div>
