@@ -403,48 +403,83 @@ export default function Home() {
 </div>
 </section>
 {/*  Contact Info  */}
-<section className="bg-black border-[8px] border-primary-fixed shadow-[24px_24px_0px_0px_#fde400] p-10 md:p-20 flex flex-col md:flex-row gap-16 items-center justify-between relative overflow-hidden mt-20">
-{/*  Background decor  */}
-<div className="absolute -top-20 -right-20 text-[300px] opacity-10 text-white font-black leading-none font-display pointer-events-none rotate-12">SYS</div>
-<div className="absolute bottom-10 left-10 w-32 h-32 border-[8px] border-cyan-brutal rounded-full opacity-20 pointer-events-none"></div>
-<div className="absolute top-10 left-1/2 w-40 h-40 bg-secondary-fixed-dim border-[8px] border-black rotate-45 opacity-20 pointer-events-none"></div>
-<div className="flex flex-col gap-6 z-10 w-full md:w-1/2">
-<h2 className="font-display text-[60px] md:text-[100px] font-black uppercase text-white leading-none tracking-tighter">System<br/><span className="text-lime-brutal bg-white px-4 py-2 border-[6px] border-lime-brutal inline-block transform -skew-x-12 ml-4">Ping</span></h2>
-<p className="font-body-lg text-2xl text-black font-black bg-primary-fixed inline-block p-4 self-start border-[4px] border-white shadow-[8px_8px_0px_0px_#fff] uppercase rotate-[-2deg]">Need to scale your IT infrastructure or automate workflows? Let's connect.</p>
-</div>
-<div className="w-full md:w-1/2 z-10 bg-white p-8 border-[6px] border-cyan-brutal shadow-[12px_12px_0px_0px_#00ffff] rotate-[2deg] flex flex-col gap-6">
-<h3 className="font-display font-black text-2xl uppercase bg-black text-white self-start px-4 py-1">CONTACT_INFO</h3>
+<section className="bg-black border-[8px] border-primary-fixed shadow-[24px_24px_0px_0px_#fde400] flex flex-col relative mt-20">
+  
+  {/* Top Marquee Tape */}
+  <div className="w-full overflow-hidden bg-lime-brutal border-b-[6px] border-black py-2 whitespace-nowrap rotate-1 origin-left absolute top-0 z-20 shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
+    <div className="font-display font-black uppercase text-xl inline-block animate-[pulse_2s_infinite]">
+      {'INITIALIZE CONNECTION // SYSTEM PING // OPEN PORT 8080 // AWAITING HANDSHAKE // '.repeat(10)}
+    </div>
+  </div>
 
-<a href="mailto:naufalfaruq285@gmail.com" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-lime-brutal transition-colors">
-<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-white">mail</span>
-</div>
-<div className="flex flex-col">
-<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Email</span>
-<span className="font-body-lg font-black text-xl md:text-2xl break-all">naufalfaruq285@gmail.com</span>
-</div>
-</a>
+  <div className="p-10 md:p-20 flex flex-col md:flex-row gap-16 items-center justify-between relative overflow-hidden bg-dots pt-24">
+    {/*  Background decor  */}
+    <div className="absolute -top-10 -right-10 text-[200px] md:text-[300px] opacity-20 text-white font-black leading-none font-display pointer-events-none rotate-12 drop-shadow-[10px_10px_0px_rgba(255,255,255,0.2)]">SYS</div>
+    <div className="absolute bottom-5 left-5 w-40 h-40 border-[12px] border-cyan-brutal rounded-full opacity-40 pointer-events-none animate-ping"></div>
+    <div className="absolute top-20 left-1/3 w-40 h-40 bg-secondary-fixed-dim border-[8px] border-black rotate-45 opacity-60 pointer-events-none mix-blend-exclusion"></div>
+    <div className="absolute bottom-20 right-1/3 text-[100px] opacity-30 text-lime-brutal rotate-[-20deg] font-display pointer-events-none">*</div>
+    
+    <div className="flex flex-col gap-6 z-10 w-full md:w-1/2 relative">
+      {/* Decorative Sticker */}
+      <div className="absolute -top-10 -left-6 bg-cyan-brutal border-[4px] border-black shadow-[4px_4px_0px_0px_#000] rotate-[-15deg] px-3 py-1 z-20 hidden md:block text-black font-display font-black text-xl">
+        STATUS: ONLINE
+      </div>
+      
+      <h2 className="font-display text-[60px] md:text-[100px] font-black uppercase text-white leading-none tracking-tighter relative z-10">
+        System<br/>
+        <span className="text-lime-brutal bg-white px-4 py-2 border-[6px] border-lime-brutal inline-block transform -skew-x-12 ml-4 md:ml-8 shadow-[8px_8px_0px_0px_#fde400]">Ping</span>
+      </h2>
+      <p className="font-body-lg text-xl md:text-2xl text-black font-black bg-primary-fixed inline-block p-4 self-start border-[4px] border-white shadow-[8px_8px_0px_0px_#fff] uppercase rotate-[-2deg] mt-4 relative z-10">
+        Need to scale your IT infrastructure or automate workflows? Let's connect.
+      </p>
+      
+      {/* Abstract Barcode */}
+      <div className="flex items-end h-16 gap-1 mt-4 opacity-50 bg-white p-2 self-start border-[3px] border-black rotate-[2deg]">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className="bg-black" style={{ width: `${Math.random() * 8 + 2}px`, height: `${Math.random() * 60 + 40}%` }}></div>
+        ))}
+      </div>
+    </div>
+    
+    <div className="w-full md:w-1/2 z-20 bg-white p-8 border-[8px] border-cyan-brutal shadow-[16px_16px_0px_0px_#00ffff] rotate-[2deg] flex flex-col gap-6 relative hover:rotate-0 transition-transform duration-500">
+      {/* Corner Pin */}
+      <div className="absolute -top-4 -right-4 w-8 h-8 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
+      
+      <h3 className="font-display font-black text-3xl uppercase bg-black text-white self-start px-6 py-2 border-[4px] border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-1deg] -mt-12 ml-4">CONTACT_INFO</h3>
 
-<a href="https://www.linkedin.com/in/muhammad-naufal-faruq" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-primary-fixed transition-colors">
-<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-white">person</span>
-</div>
-<div className="flex flex-col">
-<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">LinkedIn</span>
-<span className="font-body-lg font-black text-xl md:text-2xl break-all">muhammad-naufal-faruq</span>
-</div>
-</a>
+      <div className="flex flex-col gap-5 mt-4">
+        <a href="mailto:naufalfaruq285@gmail.com" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-lime-brutal hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+          <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+            <span className="material-symbols-outlined text-white text-3xl">mail</span>
+          </div>
+          <div className="flex flex-col overflow-hidden">
+            <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Email</span>
+            <span className="font-body-lg font-black text-lg md:text-xl truncate">naufalfaruq285@gmail.com</span>
+          </div>
+        </a>
 
-<div className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-secondary-fixed-dim transition-colors">
-<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-white">location_on</span>
-</div>
-<div className="flex flex-col">
-<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Location</span>
-<span className="font-body-lg font-black text-xl md:text-2xl">Pekalongan, Indonesia</span>
-</div>
-</div>
-</div>
+        <a href="https://www.linkedin.com/in/muhammad-naufal-faruq" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-primary-fixed hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+          <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+            <span className="material-symbols-outlined text-white text-3xl">person</span>
+          </div>
+          <div className="flex flex-col overflow-hidden">
+            <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">LinkedIn</span>
+            <span className="font-body-lg font-black text-lg md:text-xl truncate">muhammad-naufal-faruq</span>
+          </div>
+        </a>
+
+        <div className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-secondary-fixed-dim hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+          <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+            <span className="material-symbols-outlined text-white text-3xl">location_on</span>
+          </div>
+          <div className="flex flex-col overflow-hidden">
+            <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Location</span>
+            <span className="font-body-lg font-black text-lg md:text-xl truncate">Pekalongan, Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 {/*  Footer  */}
