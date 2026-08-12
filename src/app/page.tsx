@@ -71,19 +71,51 @@ export default function Home() {
 </section>
 
 {/*  About Me Section  */}
-<section className="flex flex-col md:flex-row gap-12 items-stretch bg-lime-brutal border-[8px] border-black p-10 md:p-16 shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden bg-dots">
+<section className="flex flex-col md:flex-row gap-12 items-stretch bg-lime-brutal border-[8px] border-black p-10 md:p-16 shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden bg-dots group">
+    {/* Background Watermarks */}
     <div className="absolute -top-10 -right-10 text-[120px] md:text-[200px] font-display font-black text-black opacity-10 rotate-12 pointer-events-none leading-none">WHO_AM_I</div>
+    <div className="absolute bottom-10 -left-10 text-[80px] md:text-[150px] font-display font-black text-black opacity-10 -rotate-12 pointer-events-none leading-none">NPL_DEV</div>
+    
+    {/* Decorative Stickers & Crosshairs */}
+    <div className="absolute top-6 left-1/2 bg-primary-fixed border-[4px] border-black p-2 md:p-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-15deg] z-20 group-hover:rotate-6 transition-transform duration-300">
+        <span className="font-display font-black text-lg md:text-xl uppercase tracking-widest text-black">Caution: High Energy</span>
+    </div>
+    
+    <div className="absolute bottom-8 left-1/4 bg-cyan-brutal border-[4px] border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[20deg] z-20 group-hover:scale-125 transition-transform flex items-center justify-center">
+        <span className="material-symbols-outlined text-4xl font-bold text-black">verified</span>
+    </div>
+
+    <div className="absolute top-10 left-10 text-black text-4xl font-black opacity-40">+</div>
+    <div className="absolute bottom-10 right-10 text-black text-4xl font-black opacity-40">+</div>
+    <div className="absolute top-1/2 right-4 text-black text-4xl font-black opacity-40 rotate-45">+</div>
+
     <div className="w-full md:w-1/3 flex flex-col justify-center items-start border-b-[6px] md:border-b-0 md:border-r-[6px] border-black pb-8 md:pb-0 md:pr-10 gap-6 relative z-10">
-        <h2 className="font-display text-[60px] md:text-[70px] lg:text-[80px] font-black uppercase text-black leading-none bg-white p-4 border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -skew-y-3">
-            ABOUT<br/><span className="text-white bg-black px-2 py-1 inline-block transform skew-y-3 mt-2">ME_</span>
+        <h2 className="font-display text-[60px] md:text-[70px] lg:text-[80px] font-black uppercase text-black leading-none bg-white p-4 border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -skew-y-3 group-hover:skew-y-0 transition-transform duration-300">
+            ABOUT<br/><span className="text-white bg-black px-2 py-1 inline-block transform skew-y-3 mt-2 group-hover:-skew-y-3 transition-transform duration-300">ME_</span>
         </h2>
         <div className="bg-black text-white font-display font-black px-4 py-2 text-xl border-[4px] border-white transform rotate-2">USER_PROFILE</div>
+        
+        {/* Abstract Barcode */}
+        <div className="hidden md:flex gap-1 mt-6 opacity-80">
+            <div className="w-2 h-12 bg-black"></div>
+            <div className="w-4 h-12 bg-black"></div>
+            <div className="w-1 h-12 bg-black"></div>
+            <div className="w-6 h-12 bg-black"></div>
+            <div className="w-2 h-12 bg-black"></div>
+            <div className="w-3 h-12 bg-black"></div>
+            <div className="w-1 h-12 bg-black"></div>
+            <div className="w-8 h-12 bg-black"></div>
+            <div className="w-2 h-12 bg-black"></div>
+            <div className="w-5 h-12 bg-black"></div>
+        </div>
     </div>
-    <div className="w-full md:w-2/3 flex flex-col justify-center gap-8 z-10">
-        <p className="font-body-lg font-bold text-xl md:text-2xl text-on-surface bg-white p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
-            Hello! I'm <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1">Muhammad Naufal Faruq</span>, a Full Stack Developer and IT Support Enthusiast. I am obsessed with solving complex technical problems and designing highly reliable system architectures.
+    <div className="w-full md:w-2/3 flex flex-col justify-center gap-8 z-10 relative">
+        <div className="absolute -top-6 -right-6 bg-secondary-fixed-dim border-[4px] border-black p-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[15deg] z-30 group-hover:rotate-[30deg] transition-transform"><span className="material-symbols-outlined text-4xl text-black">rocket_launch</span></div>
+
+        <p className="font-body-lg font-bold text-xl md:text-2xl text-on-surface bg-white p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all">
+            Hello! I'm <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">Muhammad Naufal Faruq</span>, a Full Stack Developer and IT Support Enthusiast. I am obsessed with solving complex technical problems and designing highly reliable system architectures.
         </p>
-        <p className="font-body-lg font-bold text-lg md:text-xl text-on-surface bg-cyan-brutal p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
+        <p className="font-body-lg font-bold text-lg md:text-xl text-on-surface bg-cyan-brutal p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all rotate-[-1deg]">
             With experience ranging from building enterprise-scale systems to integrating Agentic AI, I combine structured logic with brutalist creativity to craft digital solutions that are both visually striking and highly functional.
         </p>
     </div>
