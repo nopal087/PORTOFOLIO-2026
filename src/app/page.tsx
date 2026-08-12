@@ -321,7 +321,6 @@ export default function Home() {
 </div>
 <div className="font-body-lg font-black text-center max-w-3xl mx-auto bg-primary-fixed p-6 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[1deg] uppercase z-10 flex flex-col items-center gap-4">
         <span className="text-3xl">Don't be a stranger. Drop a line, fork a repo, or just yell at me on the internet.</span>
-        <span className="text-lg md:text-xl bg-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-[2deg]">Jangan sungkan. Kirim pesan, fork repo, atau sapa saja saya di internet.</span>
     </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 z-10 mt-8">
 {/*  Instagram  */}
