@@ -38,7 +38,7 @@ export default function Home() {
                     CREATIVE<br/><span className="text-white bg-black px-2 py-1 inline-block transform -skew-x-12">DEVELOPER</span><br/>&amp; DESIGNER
                 </h1>
 <p className="font-body-lg text-2xl text-on-surface-variant max-w-xl bg-lime-brutal p-6 border-[5px] border-black font-black uppercase rotate-[1deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                    IT Support &amp; Full Stack Developer. Berfokus pada keandalan sistem, agentic AI, dan pemecahan masalah teknis secara terukur.
+                    IT Support &amp; Full Stack Developer. Focused on system reliability, Agentic AI, and scalable technical problem-solving.
                 </p>
 <div className="flex gap-6 flex-wrap w-full">
 <button className="bg-black text-white border-[5px] border-primary-fixed shadow-[12px_12px_0px_0px_#fde400] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_#fde400] active:translate-y-2 active:shadow-none transition-all uppercase flex-grow text-center">
