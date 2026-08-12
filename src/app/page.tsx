@@ -15,11 +15,11 @@ export default function Home() {
             NPL DEV
         </div>
 <nav className="hidden md:flex gap-gutter items-center bg-cyan-brutal border-[4px] border-black px-8 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[2deg]">
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">About</a>
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Projects</a>
-<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Contact</a>
+<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#about">About</a>
+<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#projects">Projects</a>
+<a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#contact">Contact</a>
 </nav>
-<a href="mailto:naufalfaruq285@gmail.com" className="hidden md:block bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] px-8 py-3 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all rotate-[-4deg] uppercase">
+<a href="#contact" className="hidden md:block bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] px-8 py-3 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all rotate-[-4deg] uppercase">
             Hire Me
         </a>
 {/*  Mobile Menu Icon (Placeholder)  */}
@@ -43,9 +43,9 @@ export default function Home() {
                     IT Support &amp; Full Stack Developer. Focused on system reliability, Agentic AI, and scalable technical problem-solving.
                 </p>
 <div className="flex gap-6 flex-wrap w-full">
-<button className="bg-black text-white border-[5px] border-primary-fixed shadow-[12px_12px_0px_0px_#fde400] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_#fde400] active:translate-y-2 active:shadow-none transition-all uppercase flex-grow text-center">
+<a href="#contact" className="bg-black text-white border-[5px] border-primary-fixed shadow-[12px_12px_0px_0px_#fde400] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_#fde400] active:translate-y-2 active:shadow-none transition-all uppercase flex-grow text-center">
                         LET'S WORK TOGETHER
-                    </button>
+                    </a>
 <a href="/CV-Muhammad%20Naufal%20Faruq-JULI-2026.pdf" download="CV-Muhammad Naufal Faruq-JULI-2026.pdf" className="bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all uppercase flex items-center justify-center gap-3 flex-grow">
                         RESUME <span className="material-symbols-outlined text-3xl font-bold">download</span>
 </a>
@@ -73,7 +73,7 @@ export default function Home() {
 </section>
 
 {/*  About Me Section  */}
-<section className="flex flex-col md:flex-row gap-12 items-stretch bg-lime-brutal border-[8px] border-black p-10 md:p-16 shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden bg-dots group">
+<section id="about" className="flex flex-col md:flex-row gap-12 items-stretch bg-lime-brutal border-[8px] border-black p-10 md:p-16 shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden bg-dots group">
     {/* Background Watermarks */}
     <div className="absolute -top-10 -right-10 text-[120px] md:text-[200px] font-display font-black text-black opacity-10 rotate-12 pointer-events-none leading-none">WHO_AM_I</div>
     <div className="absolute bottom-10 -left-10 text-[80px] md:text-[150px] font-display font-black text-black opacity-10 -rotate-12 pointer-events-none leading-none">NPL_DEV</div>
@@ -213,7 +213,7 @@ export default function Home() {
 </div>
 </section>
 {/*  Projects Section  */}
-<section className="flex flex-col gap-16">
+<section id="projects" className="flex flex-col gap-16">
 <div className="relative inline-block self-end">
 <div className="absolute inset-0 bg-primary-fixed border-[5px] border-black translate-x-[-10px] translate-y-3 -z-10 rotate-[-3deg]"></div>
 <h2 className="font-display text-[80px] font-black border-[6px] border-black bg-secondary-fixed-dim p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[2deg] uppercase tracking-tighter">Selected_Works</h2>
@@ -403,7 +403,7 @@ export default function Home() {
 </div>
 </section>
 {/*  Contact Info  */}
-<section className="bg-black border-[8px] border-primary-fixed shadow-[24px_24px_0px_0px_#fde400] flex flex-col relative mt-20">
+<section id="contact" className="bg-black border-[8px] border-primary-fixed shadow-[24px_24px_0px_0px_#fde400] flex flex-col relative mt-20">
   
   {/* Top Marquee Tape */}
   <div className="w-full overflow-hidden bg-lime-brutal border-b-[6px] border-black py-2 whitespace-nowrap rotate-1 origin-left absolute top-0 z-20 shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
