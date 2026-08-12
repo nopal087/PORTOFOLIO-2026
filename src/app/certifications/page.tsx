@@ -29,20 +29,20 @@ export default function CertificationsPage() {
   const certificates = getCertificates(certDir, '/sertifikat');
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 md:p-16">
+    <div className="min-h-screen bg-gray-100 p-4 md:p-16">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
-          <div className="relative inline-block">
-            <div className="absolute inset-0 bg-black border-[5px] border-black translate-x-3 translate-y-3 -z-10 rotate-[2deg]"></div>
-            <h1 className="font-display text-[50px] md:text-[80px] font-black border-[6px] border-black bg-cyan-brutal p-6 shadow-[12px_12px_0px_0px_#ccff00] rotate-[-2deg] uppercase tracking-tighter">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 md:mb-16 gap-6">
+          <div className="relative inline-block max-w-full">
+            <div className="absolute inset-0 bg-black border-[3px] md:border-[5px] border-black translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 -z-10 rotate-[2deg]"></div>
+            <h1 className="font-display text-[32px] sm:text-[40px] md:text-[80px] font-black border-[4px] md:border-[6px] border-black bg-cyan-brutal p-4 md:p-6 shadow-[8px_8px_0px_0px_#ccff00] md:shadow-[12px_12px_0px_0px_#ccff00] rotate-[-2deg] uppercase tracking-tighter w-full overflow-hidden text-ellipsis">
               CERTIFICATIONS
             </h1>
           </div>
           
-          <Link href="/" className="bg-primary-fixed border-[4px] border-black px-8 py-4 font-display font-black text-2xl uppercase hover:bg-black hover:text-white transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[2deg] hover:rotate-0 inline-flex items-center gap-2">
-            <span className="material-symbols-outlined text-3xl">arrow_back</span>
+          <Link href="/" className="bg-primary-fixed border-[3px] md:border-[4px] border-black px-6 py-3 md:px-8 md:py-4 font-display font-black text-lg md:text-2xl uppercase hover:bg-black hover:text-white transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[2deg] hover:rotate-0 inline-flex items-center gap-2">
+            <span className="material-symbols-outlined text-2xl md:text-3xl">arrow_back</span>
             BACK TO HOME
           </Link>
         </div>
@@ -60,7 +60,7 @@ export default function CertificationsPage() {
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${bgColor} border-[6px] border-black p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-4 ${rotation} ${hoverRotation} hover:-translate-y-4 transition-all group`}
+                className={`${bgColor} border-[4px] md:border-[6px] border-black p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-4 ${rotation} ${hoverRotation} hover:-translate-y-4 transition-all group`}
               >
                 {/* PDF Preview Frame */}
                 <div className="w-full aspect-[4/3] border-[4px] border-black bg-gray-200 overflow-hidden relative shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
