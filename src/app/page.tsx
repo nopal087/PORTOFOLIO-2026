@@ -19,15 +19,15 @@ export default function Home() {
 <div className="absolute -top-12 left-5 bg-cyan-brutal border-[5px] border-black px-6 py-2 font-display font-black text-3xl rotate-[-18deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">HELLO WORLD</div>
 <div className="absolute bottom-24 left-1/3 bg-lime-brutal border-[5px] border-black px-6 py-2 font-display font-black text-2xl rotate-[25deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">! ERROR 404: BORING NOT FOUND</div>
 <div className="absolute top-1/2 -right-10 bg-secondary-fixed-dim border-[5px] border-black px-4 py-10 font-display font-black text-4xl rotate-[90deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">X_X</div>
-<div className="flex flex-col items-start gap-8 z-10 bg-surface-container-lowest p-10 border-[6px] border-black shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative bg-stripes">
-<div className="absolute -top-6 -right-6 bg-primary-fixed border-[4px] border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-12 z-30"><span className="material-symbols-outlined text-4xl">bolt</span></div>
-<h1 className="font-display text-[60px] md:text-[110px] font-black text-on-background uppercase leading-[0.9] tracking-tighter bg-white p-4 border-[4px] border-black inline-block shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
+<div className="flex flex-col items-start gap-6 md:gap-8 z-10 bg-surface-container-lowest p-6 md:p-10 border-[4px] md:border-[6px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative bg-stripes">
+<div className="absolute -top-6 -right-6 bg-primary-fixed border-[3px] md:border-[4px] border-black p-3 md:p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-12 z-30"><span className="material-symbols-outlined text-2xl md:text-4xl">bolt</span></div>
+<h1 className="font-display text-[38px] sm:text-[50px] md:text-[110px] font-black text-on-background uppercase leading-[0.9] tracking-tighter bg-white p-3 md:p-4 border-[3px] md:border-[4px] border-black inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
                     CREATIVE<br/><span className="text-white bg-black px-2 py-1 inline-block transform -skew-x-12">DEVELOPER</span><br/>&amp; DESIGNER
                 </h1>
-<p className="font-body-lg text-2xl text-on-surface-variant max-w-xl bg-lime-brutal p-6 border-[5px] border-black font-black uppercase rotate-[1deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+<p className="font-body-lg text-lg md:text-2xl text-on-surface-variant max-w-xl bg-lime-brutal p-4 md:p-6 border-[4px] md:border-[5px] border-black font-black uppercase rotate-[1deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                     IT Support &amp; Full Stack Developer. Focused on system reliability, Agentic AI, and scalable technical problem-solving.
                 </p>
-<div className="flex gap-6 flex-wrap w-full">
+<div className="flex gap-4 md:gap-6 flex-wrap w-full">
 <a href="#contact" className="bg-black text-white border-[5px] border-primary-fixed shadow-[12px_12px_0px_0px_#fde400] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_#fde400] active:translate-y-2 active:shadow-none transition-all uppercase flex-grow text-center">
                         LET'S WORK TOGETHER
                     </a>
