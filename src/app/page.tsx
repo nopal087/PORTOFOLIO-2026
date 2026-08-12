@@ -402,24 +402,48 @@ export default function Home() {
 </div>
 </div>
 </section>
-{/*  Newsletter  */}
+{/*  Contact Info  */}
 <section className="bg-black border-[8px] border-primary-fixed shadow-[24px_24px_0px_0px_#fde400] p-10 md:p-20 flex flex-col md:flex-row gap-16 items-center justify-between relative overflow-hidden mt-20">
 {/*  Background decor  */}
-<div className="absolute -top-20 -right-20 text-[300px] opacity-10 text-white font-black leading-none font-display pointer-events-none rotate-12">LAB</div>
+<div className="absolute -top-20 -right-20 text-[300px] opacity-10 text-white font-black leading-none font-display pointer-events-none rotate-12">SYS</div>
 <div className="absolute bottom-10 left-10 w-32 h-32 border-[8px] border-cyan-brutal rounded-full opacity-20 pointer-events-none"></div>
 <div className="absolute top-10 left-1/2 w-40 h-40 bg-secondary-fixed-dim border-[8px] border-black rotate-45 opacity-20 pointer-events-none"></div>
 <div className="flex flex-col gap-6 z-10 w-full md:w-1/2">
-<h2 className="font-display text-[60px] md:text-[100px] font-black uppercase text-white leading-none tracking-tighter">Join<br/><span className="text-lime-brutal bg-white px-4 py-2 border-[6px] border-lime-brutal inline-block transform -skew-x-12 ml-4">The Lab</span></h2>
-<p className="font-body-lg text-2xl text-black font-black bg-primary-fixed inline-block p-4 self-start border-[4px] border-white shadow-[8px_8px_0px_0px_#fff] uppercase rotate-[-2deg]">Get monthly insights on creative coding and neobrutalist design.</p>
+<h2 className="font-display text-[60px] md:text-[100px] font-black uppercase text-white leading-none tracking-tighter">System<br/><span className="text-lime-brutal bg-white px-4 py-2 border-[6px] border-lime-brutal inline-block transform -skew-x-12 ml-4">Ping</span></h2>
+<p className="font-body-lg text-2xl text-black font-black bg-primary-fixed inline-block p-4 self-start border-[4px] border-white shadow-[8px_8px_0px_0px_#fff] uppercase rotate-[-2deg]">Need to scale your IT infrastructure or automate workflows? Let's connect.</p>
 </div>
-<div className="w-full md:w-1/2 z-10 bg-white p-8 border-[6px] border-cyan-brutal shadow-[12px_12px_0px_0px_#00ffff] rotate-[2deg]">
-<form className="flex flex-col gap-6 w-full">
-<label className="font-display font-black text-2xl uppercase bg-black text-white self-start px-4 py-1">TRANSMISSION_INPUT</label>
-<input className="w-full border-[6px] border-black bg-white p-6 font-display font-black text-2xl focus:outline-none focus:ring-8 focus:ring-lime-brutal shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase placeholder-gray-400 transition-all focus:-translate-y-1 focus:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]" placeholder="ENTER YOUR EMAIL..." required type="email"/>
-<button className="bg-primary-fixed border-[6px] border-black px-10 py-6 font-display font-black text-3xl uppercase hover:bg-black hover:text-primary-fixed hover:-translate-y-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all w-full flex justify-between items-center group" type="submit">
-                         Subscribe <span className="material-symbols-outlined text-4xl group-hover:rotate-90 transition-transform">arrow_outward</span>
-</button>
-</form>
+<div className="w-full md:w-1/2 z-10 bg-white p-8 border-[6px] border-cyan-brutal shadow-[12px_12px_0px_0px_#00ffff] rotate-[2deg] flex flex-col gap-6">
+<h3 className="font-display font-black text-2xl uppercase bg-black text-white self-start px-4 py-1">CONTACT_INFO</h3>
+
+<a href="mailto:naufalfaruq285@gmail.com" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-lime-brutal transition-colors">
+<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
+<span className="material-symbols-outlined text-white">mail</span>
+</div>
+<div className="flex flex-col">
+<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Email</span>
+<span className="font-body-lg font-black text-xl md:text-2xl break-all">naufalfaruq285@gmail.com</span>
+</div>
+</a>
+
+<a href="https://www.linkedin.com/in/muhammad-naufal-faruq" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-primary-fixed transition-colors">
+<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
+<span className="material-symbols-outlined text-white">person</span>
+</div>
+<div className="flex flex-col">
+<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">LinkedIn</span>
+<span className="font-body-lg font-black text-xl md:text-2xl break-all">muhammad-naufal-faruq</span>
+</div>
+</a>
+
+<div className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-secondary-fixed-dim transition-colors">
+<div className="w-12 h-12 bg-black flex items-center justify-center border-[2px] border-black group-hover:scale-110 transition-transform">
+<span className="material-symbols-outlined text-white">location_on</span>
+</div>
+<div className="flex flex-col">
+<span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">Location</span>
+<span className="font-body-lg font-black text-xl md:text-2xl">Pekalongan, Indonesia</span>
+</div>
+</div>
 </div>
 </section>
 </main>
