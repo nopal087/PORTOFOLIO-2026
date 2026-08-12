@@ -151,7 +151,7 @@ export default function Home() {
 <div className="bg-black text-white font-display font-black text-xl p-4 text-center rotate-[-3deg] shadow-[6px_6px_0px_0px_#ccff00] uppercase border-[3px] border-black">NOV 25 - PRESENT</div>
 <div className="bg-white border-[5px] border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all">
 <h4 className="font-display font-black text-2xl uppercase bg-primary-fixed inline-block px-2 mb-2 border-[2px] border-black">IT Support / Developer</h4>
-<h5 className="font-display font-bold text-xl uppercase mb-4 text-cyan-brutal stroke-black" style={{ WebkitTextStroke: "1px black" }}>@ PT Reska Multi Usaha</h5>
+<h5 className="font-display font-bold text-xl uppercase mb-4">@ PT Reska Multi Usaha</h5>
 <p className="font-body-lg text-xl font-bold bg-gray-100 p-4 border-[3px] border-black border-dashed">Merancang aplikasi web end-to-end (WMS, Loko Cafe) dengan Next.js &amp; Golang, mengelola infrastruktur IT, serta memanfaatkan Workflow AI Agents untuk akselerasi SDLC.</p>
 <div className="flex gap-2 mt-4 flex-wrap">
 <span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">Next.js</span>
