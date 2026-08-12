@@ -355,20 +355,20 @@ export default function Home() {
 <section className="flex flex-col gap-16 relative mt-20">
 <div className="relative inline-block self-start z-10">
 <div className="absolute inset-0 bg-black border-[5px] border-black translate-x-3 translate-y-3 -z-10 rotate-[2deg]"></div>
-<h2 className="font-display text-[80px] font-black border-[6px] border-black bg-white p-6 shadow-[12px_12px_0px_0px_#ccff00] rotate-[3deg] uppercase tracking-tighter">Client_Feedback</h2>
+<h2 className="font-display text-[80px] font-black border-[6px] border-black bg-white p-6 shadow-[12px_12px_0px_0px_#ccff00] rotate-[3deg] uppercase tracking-tighter">Core_Philosophy</h2>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-12">
 <div className="bg-secondary-fixed-dim border-[6px] border-black p-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-[-3deg] flex flex-col gap-6 hover:rotate-0 hover:-translate-y-4 transition-all relative group bg-dots">
 <div className="absolute -top-8 -left-8 bg-black text-white w-16 h-16 rounded-full flex items-center justify-center border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
 <span className="font-display font-black text-2xl">01</span>
 </div>
-<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50">format_quote</span>
-<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"Absolutely brutal in the best way possible. Delivered a site that completely shattered our expectations and our competitors."</p>
+<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50">terminal</span>
+<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"Code must be robust. Design must be relentless. We do not tolerate fragile systems."</p>
 <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6">
-<div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
+<div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center"><span className="material-symbols-outlined text-white">dns</span></div>
 <div>
-<p className="font-display text-2xl font-black uppercase bg-black text-white px-2 inline-block">Sarah K.</p>
-<p className="font-body-lg font-bold text-lg uppercase bg-primary-fixed px-2 border-[2px] border-black mt-1 inline-block">Tech Corp</p>
+<p className="font-display text-2xl font-black uppercase bg-black text-white px-2 inline-block">RELIABILITY</p>
+<p className="font-body-lg font-bold text-lg uppercase bg-primary-fixed px-2 border-[2px] border-black mt-1 inline-block">Architecture</p>
 </div>
 </div>
 </div>
@@ -376,13 +376,13 @@ export default function Home() {
 <div className="absolute -top-8 -left-8 bg-black text-white w-16 h-16 rounded-full flex items-center justify-center border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
 <span className="font-display font-black text-2xl">02</span>
 </div>
-<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50">format_quote</span>
-<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"The design is loud, fast, and impossible to ignore. Exactly what we needed to launch our new product line."</p>
+<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50">smart_toy</span>
+<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"AI is not magic. It's workflow acceleration. Automate the mundane, engineer the complex."</p>
 <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6">
-<div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
+<div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center"><span className="material-symbols-outlined text-white">memory</span></div>
 <div>
-<p className="font-display text-2xl font-black uppercase bg-black text-white px-2 inline-block">Marcus D.</p>
-<p className="font-body-lg font-bold text-lg uppercase bg-cyan-brutal px-2 border-[2px] border-black mt-1 inline-block">StartUp Inc</p>
+<p className="font-display text-2xl font-black uppercase bg-black text-white px-2 inline-block">AGENTIC AI</p>
+<p className="font-body-lg font-bold text-lg uppercase bg-cyan-brutal px-2 border-[2px] border-black mt-1 inline-block">Automation</p>
 </div>
 </div>
 </div>
@@ -390,13 +390,13 @@ export default function Home() {
 <div className="absolute -top-8 -left-8 bg-black text-white w-16 h-16 rounded-full flex items-center justify-center border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
 <span className="font-display font-black text-2xl">03</span>
 </div>
-<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50 bg-white inline-block rounded-full p-2 border-[4px] border-black">format_quote</span>
-<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"Code is clean, design is wild. A rare combination of structural integrity and creative chaos."</p>
+<span className="material-symbols-outlined text-[80px] text-black leading-none h-16 opacity-50 bg-white inline-block rounded-full p-2 border-[4px] border-black">code_blocks</span>
+<p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">"No fluff. No overengineering. Pure, raw performance wrapped in unignorable aesthetics."</p>
 <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6 bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-<div className="w-16 h-16 bg-lime-brutal rounded-full border-[4px] border-black"></div>
+<div className="w-16 h-16 bg-lime-brutal rounded-full border-[4px] border-black flex items-center justify-center"><span className="material-symbols-outlined text-black">bolt</span></div>
 <div>
-<p className="font-display text-2xl font-black uppercase">Elena R.</p>
-<p className="font-body-lg font-bold text-lg uppercase text-secondary">Design Agency</p>
+<p className="font-display text-2xl font-black uppercase">PERFORMANCE</p>
+<p className="font-body-lg font-bold text-lg uppercase text-secondary">Optimization</p>
 </div>
 </div>
 </div>
