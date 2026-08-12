@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <>
@@ -195,13 +197,17 @@ export default function Home() {
 <h5 className="font-display font-bold text-xl uppercase mb-4 text-tertiary">Univ Muhammadiyah Surakarta</h5>
 <p className="font-body-lg text-lg font-bold border-l-[6px] border-black pl-4">IPK 3.77. Mengembangkan aplikasi SI-BUMDES untuk manajemen layanan Wi-Fi desa digital.</p>
 </div>
-<div className="bg-white border-[5px] border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
-<div className="absolute -right-10 -bottom-10 text-[100px] text-cyan-brutal opacity-30 font-black rotate-[20deg] pointer-events-none group-hover:scale-110 transition-transform">CERT</div>
+<Link href="/certifications" className="bg-white border-[5px] border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer block">
+<div className="absolute -right-10 -bottom-10 text-[100px] text-cyan-brutal opacity-30 font-black rotate-[20deg] pointer-events-none group-hover:scale-110 group-hover:text-lime-brutal transition-all">CERT</div>
 <div className="bg-lime-brutal border-[3px] border-black font-display font-black px-4 py-1 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -skew-x-12">2025</div>
-<h4 className="font-display font-black text-3xl uppercase mb-2 leading-tight">AI &amp; Data Science Certifications</h4>
+<h4 className="font-display font-black text-3xl uppercase mb-2 leading-tight group-hover:underline">AI &amp; Data Science Certifications</h4>
 <h5 className="font-display font-bold text-xl uppercase mb-4 text-secondary">Komdigi / DQLab / Dicoding</h5>
 <p className="font-body-lg text-lg font-bold border-l-[6px] border-black pl-4">Memiliki 20+ sertifikasi di bidang Generative AI, Deep Learning, Python, Networking, dan Cloud.</p>
+<div className="mt-6 flex items-center justify-between border-t-[4px] border-black border-dashed pt-4">
+<span className="font-display font-black text-lg uppercase bg-black text-white px-3 py-1">View Gallery</span>
+<span className="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
+</Link>
 </div>
 </div>
 </div>
