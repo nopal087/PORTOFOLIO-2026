@@ -513,7 +513,7 @@ export default function Home() {
                 © 2026 MUHAMMAD NAUFAL FARUQ
             </div>
 <div className="font-display font-black uppercase tracking-widest text-lg text-black bg-lime-brutal px-4 py-2 border-[3px] border-white shadow-[4px_4px_0px_0px_#fff] flex items-center gap-3 animate-pulse">
-<span className="w-4 h-4 bg-black rounded-full block"></span> SYSTEM OPERATIONAL
+<span className="w-4 h-4 bg-black rounded-full block"></span> STATUS: ONLINE & READY TO DEPLOY
             </div>
 </div>
 </footer>
