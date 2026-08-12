@@ -45,15 +45,21 @@ export default function Home() {
 </section>
 {/*  Marquee / Skills  */}
 <section className="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] overflow-hidden border-y-[8px] border-black py-8 bg-tertiary text-on-tertiary shadow-[0_12px_0_0_rgba(0,0,0,1)] rotate-[-2deg] my-10">
-<div className="flex gap-16 animate-[marquee_12s_linear_infinite] whitespace-nowrap">
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6">Next.js <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-cyan-brutal drop-shadow-[4px_4px_0px_#000]">Golang <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6">PostgreSQL <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-secondary-fixed-dim drop-shadow-[4px_4px_0px_#000]">Agentic AI <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6">Next.js <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-cyan-brutal drop-shadow-[4px_4px_0px_#000]">Golang <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6">PostgreSQL <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
-<span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-secondary-fixed-dim drop-shadow-[4px_4px_0px_#000]">Agentic AI <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">star</span></span>
+<div className="flex w-max animate-[marquee_12s_linear_infinite]">
+  <div className="flex gap-16 pr-16">
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6">BREAK THE RULES <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">local_fire_department</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-cyan-brutal drop-shadow-[4px_4px_0px_#000]">SHIP IT FAST <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">rocket_launch</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6">CODE LIKE HELL <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">bolt</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-secondary-fixed-dim drop-shadow-[4px_4px_0px_#000]">AUTOMATE EVERYTHING <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">smart_toy</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-lime-brutal drop-shadow-[4px_4px_0px_#000]">AI EVERYDAYS <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">psychology</span></span>
+  </div>
+  <div className="flex gap-16 pr-16">
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6">BREAK THE RULES <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">local_fire_department</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-cyan-brutal drop-shadow-[4px_4px_0px_#000]">SHIP IT FAST <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">rocket_launch</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6">CODE LIKE HELL <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">bolt</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-secondary-fixed-dim drop-shadow-[4px_4px_0px_#000]">AUTOMATE EVERYTHING <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">smart_toy</span></span>
+    <span className="font-display text-[70px] font-black uppercase flex items-center gap-6 text-lime-brutal drop-shadow-[4px_4px_0px_#000]">AI EVERYDAYS <span className="material-symbols-outlined text-6xl text-primary-fixed bg-black rounded-full p-2 border-4 border-white">psychology</span></span>
+  </div>
 </div>
 </section>
 
@@ -498,7 +504,7 @@ export default function Home() {
                 © 2026 MUHAMMAD NAUFAL FARUQ
             </div>
 <div className="font-display font-black uppercase tracking-widest text-lg text-black bg-lime-brutal px-4 py-2 border-[3px] border-white shadow-[4px_4px_0px_0px_#fff] flex items-center gap-3 animate-pulse">
-<span className="w-4 h-4 bg-black rounded-full block"></span> STATUS: ONLINE & READY TO DEPLOY
+<span className="w-4 h-4 bg-black rounded-full block"></span> STATUS : OPEN TO WORK & READY TO BUILD SOMETHING
             </div>
 </div>
 </footer>
