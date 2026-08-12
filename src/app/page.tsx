@@ -164,13 +164,13 @@ export default function Home() {
           </div>
 
           {/* Decorative Stickers & Crosshairs */}
-          <div className="absolute top-6 left-1/2 bg-primary-fixed border-[4px] border-black p-2 md:p-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-15deg] z-20 group-hover:rotate-6 transition-transform duration-300">
+          <div className="absolute top-6 left-1/2 bg-primary-fixed border-[4px] border-black p-2 md:p-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-15deg] z-20 group-hover:rotate-6 transition-transform duration-300 hidden md:block">
             <span className="font-display font-black text-lg md:text-xl uppercase tracking-widest text-black">
               Caution: High Energy
             </span>
           </div>
 
-          <div className="absolute bottom-8 left-1/4 bg-cyan-brutal border-[4px] border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[20deg] z-20 group-hover:scale-125 transition-transform flex items-center justify-center">
+          <div className="absolute bottom-8 left-1/4 bg-cyan-brutal border-[4px] border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[20deg] z-20 group-hover:scale-125 transition-transform hidden md:flex items-center justify-center">
             <span className="material-symbols-outlined text-4xl font-bold text-black">
               verified
             </span>
