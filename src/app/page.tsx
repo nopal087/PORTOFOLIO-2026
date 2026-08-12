@@ -32,6 +32,9 @@ export default function Home() {
                 bolt
               </span>
             </div>
+            <div className="inline-block bg-black text-white px-3 md:px-5 py-2 font-display font-black text-lg md:text-2xl uppercase border-[3px] md:border-[4px] border-lime-brutal rotate-[1deg] shadow-[6px_6px_0px_0px_#fde400]">
+              BUILDING THINGS. FIXING THINGS.
+            </div>
             <h1 className="font-display text-[38px] sm:text-[50px] md:text-[110px] font-black text-on-background uppercase leading-[0.9] tracking-tighter bg-white p-3 md:p-4 border-[3px] md:border-[4px] border-black inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
               CREATIVE
               <br />
@@ -50,7 +53,7 @@ export default function Home() {
                 href="#contact"
                 className="bg-black text-white border-[5px] border-primary-fixed shadow-[12px_12px_0px_0px_#fde400] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_#fde400] active:translate-y-2 active:shadow-none transition-all uppercase flex-grow text-center"
               >
-                LET'S WORK TOGETHER
+                LET&apos;S WORK TOGETHER
               </a>
               <a
                 href="/CV-Muhammad%20Naufal%20Faruq-JULI-2026.pdf"
@@ -217,7 +220,7 @@ export default function Home() {
             </div>
 
             <p className="font-body-lg font-bold text-xl md:text-2xl text-on-surface bg-white p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all">
-              Hello! I'm{" "}
+              Hello! I&apos;m{" "}
               <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                 Muhammad Naufal Faruq
               </span>
@@ -634,7 +637,7 @@ export default function Home() {
           </div>
           <div className="font-body-lg font-black text-center max-w-3xl mx-auto bg-primary-fixed p-6 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[1deg] uppercase z-10 flex flex-col items-center gap-4">
             <span className="text-3xl">
-              Don't be a stranger. Drop a line, fork a repo, or just yell at me
+              Don&apos;t be a stranger. Drop a line, fork a repo, or just yell at me
               on the internet.
             </span>
           </div>
@@ -712,8 +715,8 @@ export default function Home() {
                 terminal
               </span>
               <p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                "Code must be robust. Design must be relentless. We do not
-                tolerate fragile systems."
+                &quot;Code must be robust. Design must be relentless. We do not
+                tolerate fragile systems.&quot;
               </p>
               <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6">
                 <div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
@@ -739,8 +742,8 @@ export default function Home() {
                 smart_toy
               </span>
               <p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                "AI is not magic. It's workflow acceleration. Automate the
-                mundane, engineer the complex."
+                &quot;AI is not magic. It&apos;s workflow acceleration. Automate the
+                mundane, engineer the complex.&quot;
               </p>
               <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6">
                 <div className="w-16 h-16 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
@@ -766,8 +769,8 @@ export default function Home() {
                 code_blocks
               </span>
               <p className="font-body-lg font-black text-2xl uppercase bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                "No fluff. No overengineering. Pure, raw performance wrapped in
-                unignorable aesthetics."
+                &quot;No fluff. No overengineering. Pure, raw performance wrapped in
+                unignorable aesthetics.&quot;
               </p>
               <div className="mt-auto pt-6 border-t-[6px] border-black flex items-center gap-6 bg-white p-4 border-[4px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <div className="w-16 h-16 bg-lime-brutal rounded-full border-[4px] border-black flex items-center justify-center">
@@ -827,7 +830,7 @@ export default function Home() {
               </h2>
               <p className="font-body-lg text-xl md:text-2xl text-black font-black bg-primary-fixed inline-block p-4 self-start border-[4px] border-white shadow-[8px_8px_0px_0px_#fff] uppercase rotate-[-2deg] mt-4 relative z-10">
                 Need to scale your IT infrastructure or automate workflows?
-                Let's connect.
+                Let&apos;s connect.
               </p>
 
               {/* Abstract Barcode */}
@@ -837,8 +840,8 @@ export default function Home() {
                     key={i}
                     className="bg-black"
                     style={{
-                      width: `${Math.random() * 8 + 2}px`,
-                      height: `${Math.random() * 60 + 40}%`,
+                      width: `${(i * 13) % 8 + 2}px`,
+                      height: `${(i * 17) % 60 + 40}%`,
                     }}
                   ></div>
                 ))}
