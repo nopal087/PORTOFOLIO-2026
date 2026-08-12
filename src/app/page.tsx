@@ -32,7 +32,7 @@ export default function Home() {
                 bolt
               </span>
             </div>
-            <div className="inline-block bg-black text-white px-3 md:px-5 py-2 font-display font-black text-lg md:text-2xl uppercase border-[3px] md:border-[4px] border-lime-brutal rotate-[1deg] shadow-[6px_6px_0px_0px_#fde400]">
+            <div className="absolute -bottom-3 right-4 md:right-8 bg-black text-white px-3 py-1 font-display font-black text-[10px] md:text-xs uppercase border-[2px] md:border-[3px] border-lime-brutal rotate-[2deg] shadow-[3px_3px_0px_0px_#a3e635] z-30 tracking-widest">
               BUILDING THINGS. FIXING THINGS.
             </div>
             <h1 className="font-display text-[38px] sm:text-[50px] md:text-[110px] font-black text-on-background uppercase leading-[0.9] tracking-tighter bg-white p-3 md:p-4 border-[3px] md:border-[4px] border-black inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
