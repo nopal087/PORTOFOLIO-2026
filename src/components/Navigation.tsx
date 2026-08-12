@@ -42,46 +42,46 @@ export default function Navigation() {
         }`}
       >
         {/* Decorative elements for mobile menu */}
-        <div className="absolute top-10 left-10 w-20 h-20 border-[6px] border-black bg-cyan-brutal rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border-[6px] border-black bg-primary-fixed rotate-45"></div>
-        <div className="absolute top-1/2 left-4 text-black text-6xl font-black opacity-20 rotate-90 tracking-widest">MENU</div>
+        <div className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 border-[4px] sm:border-[6px] border-black bg-cyan-brutal rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 right-4 sm:right-10 w-16 h-16 sm:w-24 sm:h-24 border-[4px] sm:border-[6px] border-black bg-primary-fixed rotate-45"></div>
+        <div className="absolute top-1/2 -left-2 text-black text-4xl sm:text-6xl font-black opacity-20 rotate-90 tracking-widest">MENU</div>
         
-        <nav className="flex flex-col gap-8 w-3/4 max-w-sm relative z-10">
+        <nav className="flex flex-col gap-4 sm:gap-6 w-[85%] sm:w-3/4 max-w-sm relative z-10 mt-12">
           <a 
             href="#about" 
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-white border-[6px] border-black py-4 font-display font-black text-3xl uppercase shadow-[8px_8px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#000] active:translate-y-1 active:shadow-[4px_4px_0px_0px_#000] transition-all rotate-[-2deg]"
+            className="w-full text-center bg-white border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[-2deg]"
           >
             About
           </a>
           <a 
             href="#projects" 
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-cyan-brutal border-[6px] border-black py-4 font-display font-black text-3xl uppercase shadow-[8px_8px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#000] active:translate-y-1 active:shadow-[4px_4px_0px_0px_#000] transition-all rotate-[1deg]"
+            className="w-full text-center bg-cyan-brutal border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[1deg]"
           >
             Projects
           </a>
           <a 
             href="/certifications" 
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-primary-fixed border-[6px] border-black py-4 font-display font-black text-3xl uppercase shadow-[8px_8px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#000] active:translate-y-1 active:shadow-[4px_4px_0px_0px_#000] transition-all rotate-[-1deg]"
+            className="w-full text-center bg-primary-fixed border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[-1deg]"
           >
             Certifications
           </a>
           <a 
             href="#contact" 
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-secondary-fixed-dim border-[6px] border-black py-4 font-display font-black text-3xl uppercase shadow-[8px_8px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#000] active:translate-y-1 active:shadow-[4px_4px_0px_0px_#000] transition-all rotate-[2deg]"
+            className="w-full text-center bg-secondary-fixed-dim border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[2deg]"
           >
             Contact
           </a>
-          <div className="w-full border-t-[6px] border-black border-dashed my-2"></div>
+          <div className="w-full border-t-[4px] sm:border-t-[6px] border-black border-dashed my-1 sm:my-2"></div>
           <a 
             href="#contact" 
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-black text-white border-[6px] border-primary-fixed py-5 font-display font-black text-3xl uppercase shadow-[12px_12px_0px_0px_#fde400] hover:-translate-y-1 active:translate-y-1 transition-all"
+            className="w-full flex justify-center items-center gap-2 bg-black text-white border-[4px] sm:border-[6px] border-primary-fixed py-3 sm:py-5 font-display font-black text-xl sm:text-3xl uppercase shadow-[8px_8px_0px_0px_#fde400] hover:-translate-y-1 active:translate-y-1 transition-all"
           >
-            Hire Me <span className="material-symbols-outlined ml-2">rocket_launch</span>
+            Hire Me <span className="material-symbols-outlined">rocket_launch</span>
           </a>
         </nav>
       </div>
