@@ -509,8 +509,8 @@ export default function Home() {
 </div>
 </div>
 <div className="w-full border-t-[4px] border-white/20 px-margin-mobile md:px-margin-desktop py-8 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 max-w-7xl mx-auto bg-black">
-<div className="font-display font-black uppercase tracking-widest text-lg bg-white text-black px-4 py-2 border-[3px] border-black">
-                © 2024 NEOBRUTAL PORTFOLIO. ALL RIGHTS RESERVED.
+<div className="font-display font-black uppercase tracking-widest text-sm bg-white text-black px-3 py-1 border-[3px] border-black">
+                © 2026 MUHAMMAD NAUFAL FARUQ
             </div>
 <div className="font-display font-black uppercase tracking-widest text-lg text-black bg-lime-brutal px-4 py-2 border-[3px] border-white shadow-[4px_4px_0px_0px_#fff] flex items-center gap-3 animate-pulse">
 <span className="w-4 h-4 bg-black rounded-full block"></span> SYSTEM OPERATIONAL
