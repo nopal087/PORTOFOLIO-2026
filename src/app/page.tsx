@@ -20,10 +20,10 @@ export default function Home() {
           <div className="absolute -top-12 left-5 bg-cyan-brutal border-[5px] border-black px-6 py-2 font-display font-black text-3xl rotate-[-18deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">
             HELLO WORLD
           </div>
-          <div className="absolute bottom-24 left-1/3 bg-lime-brutal border-[5px] border-black px-6 py-2 font-display font-black text-2xl rotate-[25deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">
+          <div className="absolute bottom-24 left-1/3 bg-lime-brutal border-[5px] border-black px-6 py-2 font-display font-black text-2xl rotate-[25deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform hidden md:block">
             ! ERROR 404: BORING NOT FOUND
           </div>
-          <div className="absolute top-1/2 -right-10 bg-secondary-fixed-dim border-[5px] border-black px-4 py-10 font-display font-black text-4xl rotate-[90deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">
+          <div className="absolute top-1/2 -right-10 bg-secondary-fixed-dim border-[5px] border-black px-4 py-10 font-display font-black text-4xl rotate-[90deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform hidden lg:block">
             X_X
           </div>
           <div className="flex flex-col items-start gap-6 md:gap-8 z-10 bg-surface-container-lowest p-6 md:p-10 border-[4px] md:border-[6px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative bg-stripes">
@@ -67,14 +67,14 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative justify-self-center lg:justify-self-end w-full max-w-md aspect-[4/5] z-10 group">
-            <div className="absolute inset-0 bg-lime-brutal border-[6px] border-black translate-x-12 translate-y-12 -z-10 bg-stripes"></div>
-            <div className="absolute inset-0 bg-cyan-brutal border-[6px] border-black translate-x-6 translate-y-6 -z-10 group-hover:translate-x-16 group-hover:translate-y-16 transition-transform duration-500"></div>
-            <div className="absolute -bottom-8 -left-8 bg-primary-fixed border-[5px] border-black p-4 font-display font-black text-2xl rotate-[-10deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 uppercase">
+          <div className="relative justify-self-center lg:justify-self-end w-[85%] md:w-full max-w-md aspect-[4/5] z-10 group mt-4 md:mt-0">
+            <div className="absolute inset-0 bg-lime-brutal border-[4px] md:border-[6px] border-black translate-x-6 md:translate-x-12 translate-y-6 md:translate-y-12 -z-10 bg-stripes"></div>
+            <div className="absolute inset-0 bg-cyan-brutal border-[4px] md:border-[6px] border-black translate-x-3 md:translate-x-6 translate-y-3 md:translate-y-6 -z-10 group-hover:translate-x-8 md:group-hover:translate-x-16 group-hover:translate-y-8 md:group-hover:translate-y-16 transition-transform duration-500"></div>
+            <div className="absolute -bottom-6 md:-bottom-8 -left-6 md:-left-8 bg-primary-fixed border-[4px] md:border-[5px] border-black p-3 md:p-4 font-display font-black text-xl md:text-2xl rotate-[-10deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 uppercase">
               #LOUD_AF
             </div>
             <img
-              className="w-full h-full object-cover border-[6px] border-black shadow-[16px_16px_0px_0px_#ffd7f0] transition-transform hover:-translate-y-4 hover:shadow-[24px_24px_0px_0px_#ffd7f0] duration-300 relative z-0 grayscale contrast-150"
+              className="w-full h-full object-cover border-[4px] md:border-[6px] border-black shadow-[8px_8px_0px_0px_#ffd7f0] md:shadow-[16px_16px_0px_0px_#ffd7f0] transition-transform hover:-translate-y-2 md:hover:-translate-y-4 hover:shadow-[12px_12px_0px_0px_#ffd7f0] md:hover:shadow-[24px_24px_0px_0px_#ffd7f0] duration-300 relative z-0 grayscale contrast-150"
               alt="A portrait of a creative professional"
               src="/images/pasfoto.png"
             />
@@ -82,7 +82,7 @@ export default function Home() {
         </section>
         {/*  Marquee / Skills  */}
         <section className="w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] overflow-hidden border-y-[8px] border-black py-8 bg-tertiary text-on-tertiary shadow-[0_12px_0_0_rgba(0,0,0,1)] rotate-[-2deg] my-10">
-          <div className="flex w-max animate-[marquee_12s_linear_infinite]">
+          <div className="flex w-max animate-marquee" style={{ animation: 'marquee 12s linear infinite' }}>
             <div className="flex gap-16 pr-16">
               <span className="font-display text-[70px] font-black uppercase flex items-center gap-6">
                 BREAK THE RULES{" "}
@@ -797,7 +797,7 @@ export default function Home() {
         >
           {/* Top Marquee Tape */}
           <div className="w-full overflow-hidden bg-lime-brutal border-b-[6px] border-black py-2 whitespace-nowrap rotate-1 origin-left absolute top-0 z-20 shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
-            <div className="font-display font-black uppercase text-xl inline-block animate-[pulse_2s_infinite]">
+            <div className="font-display font-black uppercase text-xl inline-block animate-pulse" style={{ animationDuration: '2s' }}>
               {"INITIALIZE CONNECTION // SYSTEM PING // OPEN PORT 8080 // AWAITING HANDSHAKE // ".repeat(
                 10
               )}
