@@ -157,6 +157,8 @@ export default function Home() {
 <span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">Next.js</span>
 <span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">Golang</span>
 <span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">Agentic AI</span>
+<span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">IT Infrastructure</span>
+<span className="bg-black text-white px-3 py-1 font-bold uppercase text-sm border-2 border-black">Networking</span>
 </div>
 </div>
 </div>
