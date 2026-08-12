@@ -70,7 +70,26 @@ export default function Home() {
 </div>
 </section>
 
-{/*  About / System Info Section  */}
+{/*  About Me Section  */}
+<section className="flex flex-col md:flex-row gap-12 items-stretch bg-lime-brutal border-[8px] border-black p-10 md:p-16 shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden bg-dots">
+    <div className="absolute -top-10 -right-10 text-[120px] md:text-[200px] font-display font-black text-black opacity-10 rotate-12 pointer-events-none leading-none">WHO_AM_I</div>
+    <div className="w-full md:w-1/3 flex flex-col justify-center items-start border-b-[6px] md:border-b-0 md:border-r-[6px] border-black pb-8 md:pb-0 md:pr-10 gap-6 relative z-10">
+        <h2 className="font-display text-[60px] md:text-[70px] lg:text-[80px] font-black uppercase text-black leading-none bg-white p-4 border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -skew-y-3">
+            ABOUT<br/><span className="text-white bg-black px-2 py-1 inline-block transform skew-y-3 mt-2">ME_</span>
+        </h2>
+        <div className="bg-black text-white font-display font-black px-4 py-2 text-xl border-[4px] border-white transform rotate-2">USER_PROFILE</div>
+    </div>
+    <div className="w-full md:w-2/3 flex flex-col justify-center gap-8 z-10">
+        <p className="font-body-lg font-bold text-xl md:text-2xl text-on-surface bg-white p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
+            Halo! Saya <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1">Muhammad Naufal Faruq</span>, seorang Full Stack Developer dan IT Support Enthusiast. Saya terobsesi memecahkan masalah teknis yang kompleks dan merancang arsitektur sistem yang andal.
+        </p>
+        <p className="font-body-lg font-bold text-lg md:text-xl text-on-surface bg-cyan-brutal p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
+            Berbekal pengalaman membangun sistem enterprise (WMS & IRIS) hingga integrasi AI Agent, saya menggabungkan logika terstruktur dan kreativitas <i>brutalist</i> untuk menciptakan solusi digital yang mencolok namun sangat fungsional.
+        </p>
+    </div>
+</section>
+
+{/*  System Info Section  */}
 <section className="flex flex-col gap-16">
 <div className="relative inline-block self-start">
 <div className="absolute inset-0 bg-secondary-fixed-dim border-[5px] border-black translate-x-3 translate-y-3 -z-10 rotate-[4deg]"></div>
