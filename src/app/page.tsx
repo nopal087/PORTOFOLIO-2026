@@ -81,10 +81,10 @@ export default function Home() {
     </div>
     <div className="w-full md:w-2/3 flex flex-col justify-center gap-8 z-10">
         <p className="font-body-lg font-bold text-xl md:text-2xl text-on-surface bg-white p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
-            Halo! Saya <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1">Muhammad Naufal Faruq</span>, seorang Full Stack Developer dan IT Support Enthusiast. Saya terobsesi memecahkan masalah teknis yang kompleks dan merancang arsitektur sistem yang andal.
+            Hello! I'm <span className="bg-primary-fixed px-2 border-2 border-black inline-block transform rotate-1 mt-1 mb-1">Muhammad Naufal Faruq</span>, a Full Stack Developer and IT Support Enthusiast. I am obsessed with solving complex technical problems and designing highly reliable system architectures.
         </p>
         <p className="font-body-lg font-bold text-lg md:text-xl text-on-surface bg-cyan-brutal p-6 md:p-8 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] leading-relaxed">
-            Berbekal pengalaman membangun sistem enterprise (WMS & IRIS) hingga integrasi AI Agent, saya menggabungkan logika terstruktur dan kreativitas <i>brutalist</i> untuk menciptakan solusi digital yang mencolok namun sangat fungsional.
+            With experience ranging from building enterprise-scale systems to integrating Agentic AI, I combine structured logic with brutalist creativity to craft digital solutions that are both visually striking and highly functional.
         </p>
     </div>
 </section>
