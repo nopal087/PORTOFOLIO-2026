@@ -187,10 +187,10 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-1/3 flex flex-col justify-center items-start border-b-[6px] md:border-b-0 md:border-r-[6px] border-black pb-8 md:pb-0 md:pr-10 gap-6 relative z-10">
-            <h2 className="font-display text-[60px] md:text-[70px] lg:text-[80px] font-black uppercase text-black leading-none bg-white p-4 border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -skew-y-3 group-hover:skew-y-0 transition-transform duration-300">
+            <h2 className="font-display text-[60px] md:text-[70px] lg:text-[80px] font-black uppercase text-black leading-none bg-white p-4 border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -skew-y-3 group-hover:skew-y-0 group-active:skew-y-0 transition-transform duration-300">
               ABOUT
               <br />
-              <span className="text-white bg-black px-2 py-1 inline-block transform skew-y-3 mt-2 group-hover:-skew-y-3 transition-transform duration-300">
+              <span className="text-white bg-black px-2 py-1 inline-block transform skew-y-3 mt-2 group-hover:-skew-y-3 group-active:-skew-y-3 transition-transform duration-300">
                 ME_
               </span>
             </h2>
@@ -797,10 +797,13 @@ export default function Home() {
         >
           {/* Top Marquee Tape */}
           <div className="w-full overflow-hidden bg-lime-brutal border-b-[6px] border-black py-2 whitespace-nowrap rotate-1 origin-left absolute top-0 z-20 shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
-            <div className="font-display font-black uppercase text-xl inline-block animate-pulse" style={{ animationDuration: '2s' }}>
-              {"INITIALIZE CONNECTION // SYSTEM PING // OPEN PORT 8080 // AWAITING HANDSHAKE // ".repeat(
-                10
-              )}
+            <div className="flex w-max animate-marquee" style={{ animation: 'marquee 90s linear infinite' }}>
+              <div className="font-display font-black uppercase text-xl inline-block pl-4">
+                {"INITIALIZE CONNECTION // SYSTEM PING // OPEN PORT 8080 // AWAITING HANDSHAKE // ".repeat(6)}
+              </div>
+              <div className="font-display font-black uppercase text-xl inline-block pl-4">
+                {"INITIALIZE CONNECTION // SYSTEM PING // OPEN PORT 8080 // AWAITING HANDSHAKE // ".repeat(6)}
+              </div>
             </div>
           </div>
 
@@ -848,26 +851,26 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full md:w-1/2 z-20 bg-white p-8 border-[8px] border-cyan-brutal shadow-[16px_16px_0px_0px_#00ffff] rotate-[2deg] flex flex-col gap-6 relative hover:rotate-0 transition-transform duration-500">
+            <div className="w-full md:w-1/2 z-20 bg-white p-5 md:p-8 border-[4px] md:border-[8px] border-cyan-brutal shadow-[8px_8px_0px_0px_#00ffff] md:shadow-[16px_16px_0px_0px_#00ffff] rotate-[2deg] flex flex-col gap-6 relative hover:rotate-0 transition-transform duration-500 mt-8 md:mt-0">
               {/* Corner Pin */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-black rounded-full border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
+              <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-6 h-6 md:w-8 md:h-8 bg-black rounded-full border-[3px] md:border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
 
-              <h3 className="font-display font-black text-3xl uppercase bg-black text-white self-start px-6 py-2 border-[4px] border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-1deg] -mt-12 ml-4">
+              <h3 className="font-display font-black text-xl md:text-3xl uppercase bg-black text-white self-start px-4 md:px-6 py-2 border-[4px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-[-1deg] -mt-8 md:-mt-12 ml-0 md:ml-4">
                 CONTACT_INFO
               </h3>
 
               <div className="flex flex-col gap-5 mt-4">
                 <a
                   href="mailto:naufalfaruq285@gmail.com"
-                  className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-lime-brutal hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-lime-brutal active:bg-lime-brutal hover:-translate-y-1 active:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
                 >
-                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-active:scale-110 group-hover:rotate-6 group-active:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
                     <span className="material-symbols-outlined text-white text-3xl">
                       mail
                     </span>
                   </div>
                   <div className="flex flex-col overflow-hidden">
-                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">
+                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black group-active:text-black">
                       Email
                     </span>
                     <span className="font-body-lg font-black text-lg md:text-xl truncate">
@@ -880,15 +883,15 @@ export default function Home() {
                   href="https://www.linkedin.com/in/muhammad-naufal-faruq"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-primary-fixed hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-primary-fixed active:bg-primary-fixed hover:-translate-y-1 active:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
                 >
-                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-active:scale-110 group-hover:rotate-6 group-active:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
                     <span className="material-symbols-outlined text-white text-3xl">
                       person
                     </span>
                   </div>
                   <div className="flex flex-col overflow-hidden">
-                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">
+                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black group-active:text-black">
                       LinkedIn
                     </span>
                     <span className="font-body-lg font-black text-lg md:text-xl truncate">
@@ -897,14 +900,14 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-secondary-fixed-dim hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
-                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
+                <div className="group flex items-center gap-4 bg-gray-100 p-4 border-[4px] border-black hover:bg-secondary-fixed-dim active:bg-secondary-fixed-dim hover:-translate-y-1 active:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+                  <div className="w-14 h-14 bg-black flex items-center justify-center border-[3px] border-black group-hover:scale-110 group-active:scale-110 group-hover:rotate-6 group-active:rotate-6 transition-transform shadow-[4px_4px_0px_0px_#fff]">
                     <span className="material-symbols-outlined text-white text-3xl">
                       location_on
                     </span>
                   </div>
                   <div className="flex flex-col overflow-hidden">
-                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black">
+                    <span className="font-display font-bold text-sm uppercase text-gray-500 group-hover:text-black group-active:text-black">
                       Location
                     </span>
                     <span className="font-body-lg font-black text-lg md:text-xl truncate">
@@ -935,25 +938,25 @@ export default function Home() {
                 Navigation
               </h4>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-cyan-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block"
+                className="font-display font-bold text-xl hover:text-black hover:bg-cyan-brutal active:text-black active:bg-cyan-brutal uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-block"
                 href="#about"
               >
                 About
               </a>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-lime-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block"
+                className="font-display font-bold text-xl hover:text-black hover:bg-lime-brutal active:text-black active:bg-lime-brutal uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-block"
                 href="#projects"
               >
                 Projects
               </a>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block"
+                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim active:text-black active:bg-secondary-fixed-dim uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-block"
                 href="/certifications"
               >
                 Certifications
               </a>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-primary-fixed uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block"
+                className="font-display font-bold text-xl hover:text-black hover:bg-primary-fixed active:text-black active:bg-primary-fixed uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-block"
                 href="#contact"
               >
                 Contact
@@ -964,7 +967,7 @@ export default function Home() {
                 Socials
               </h4>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3"
+                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim active:text-black active:bg-secondary-fixed-dim uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-flex items-center gap-3"
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -975,7 +978,7 @@ export default function Home() {
                 </span>
               </a>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3"
+                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim active:text-black active:bg-secondary-fixed-dim uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-flex items-center gap-3"
                 href="https://github.com/nopal087"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -986,7 +989,7 @@ export default function Home() {
                 </span>
               </a>
               <a
-                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-flex items-center gap-3"
+                className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim active:text-black active:bg-secondary-fixed-dim uppercase hover:translate-x-4 active:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white active:border-white inline-flex items-center gap-3"
                 href="https://www.linkedin.com/in/muhammad-naufal-faruq"
                 target="_blank"
                 rel="noopener noreferrer"
