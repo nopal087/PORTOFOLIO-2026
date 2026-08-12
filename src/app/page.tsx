@@ -112,7 +112,7 @@ export default function Home() {
 <section className="flex flex-col gap-16">
 <div className="relative inline-block self-start">
 <div className="absolute inset-0 bg-secondary-fixed-dim border-[5px] border-black translate-x-3 translate-y-3 -z-10 rotate-[4deg]"></div>
-<h2 className="font-display text-[80px] font-black border-[6px] border-black bg-primary-fixed p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] uppercase tracking-tighter">System_Info</h2>
+<h2 className="font-display text-[40px] sm:text-[50px] md:text-[60px] lg:text-[80px] font-black border-[6px] border-black bg-primary-fixed p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] uppercase tracking-tighter max-w-full overflow-hidden text-ellipsis whitespace-nowrap">System_Info</h2>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 {/*  Skills Box  */}
@@ -201,7 +201,7 @@ export default function Home() {
 <section id="projects" className="flex flex-col gap-16">
 <div className="relative inline-block self-end">
 <div className="absolute inset-0 bg-primary-fixed border-[5px] border-black translate-x-[-10px] translate-y-3 -z-10 rotate-[-3deg]"></div>
-<h2 className="font-display text-[80px] font-black border-[6px] border-black bg-secondary-fixed-dim p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[2deg] uppercase tracking-tighter">Selected_Works</h2>
+<h2 className="font-display text-[36px] sm:text-[50px] md:text-[60px] lg:text-[80px] font-black border-[6px] border-black bg-secondary-fixed-dim p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-[2deg] uppercase tracking-tighter max-w-full overflow-hidden text-ellipsis whitespace-nowrap">Selected_Works</h2>
 </div>
 {/*  Featured Project  */}
 <div className="bg-cyan-brutal border-[8px] border-black shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] p-10 flex flex-col gap-10 transition-transform hover:-translate-y-4 relative bg-dots">
@@ -308,7 +308,7 @@ export default function Home() {
 <section className="flex flex-col gap-16 border-[8px] border-black p-12 bg-white relative overflow-hidden shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] my-10 bg-stripes">
 <div className="absolute -top-20 -right-20 text-[250px] font-display font-black opacity-10 rotate-12 pointer-events-none leading-none">CONNECT</div>
 <div className="relative inline-block self-center z-10">
-<h2 className="font-display text-[80px] md:text-[100px] font-black border-[8px] border-black bg-cyan-brutal px-10 py-6 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] uppercase tracking-tighter text-center">LINK_UP</h2>
+<h2 className="font-display text-[40px] md:text-[70px] lg:text-[100px] font-black border-[8px] border-black bg-cyan-brutal px-6 md:px-10 py-4 md:py-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] uppercase tracking-tighter text-center max-w-full overflow-hidden text-ellipsis whitespace-nowrap">LINK_UP</h2>
 </div>
 <div className="font-body-lg font-black text-center max-w-3xl mx-auto bg-primary-fixed p-6 border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[1deg] uppercase z-10 flex flex-col items-center gap-4">
         <span className="text-3xl">Don't be a stranger. Drop a line, fork a repo, or just yell at me on the internet.</span>
@@ -340,7 +340,7 @@ export default function Home() {
 <section className="flex flex-col gap-16 relative mt-20">
 <div className="relative inline-block self-start z-10">
 <div className="absolute inset-0 bg-black border-[5px] border-black translate-x-3 translate-y-3 -z-10 rotate-[2deg]"></div>
-<h2 className="font-display text-[80px] font-black border-[6px] border-black bg-white p-6 shadow-[12px_12px_0px_0px_#ccff00] rotate-[3deg] uppercase tracking-tighter">Core_Philosophy</h2>
+<h2 className="font-display text-[32px] sm:text-[45px] md:text-[60px] lg:text-[80px] font-black border-[6px] border-black bg-white p-4 md:p-6 shadow-[8px_8px_0px_0px_#ccff00] md:shadow-[12px_12px_0px_0px_#ccff00] rotate-[3deg] uppercase tracking-tighter max-w-full overflow-hidden text-ellipsis whitespace-nowrap">Core_Philosophy</h2>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-12">
 <div className="bg-secondary-fixed-dim border-[6px] border-black p-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-[-3deg] flex flex-col gap-6 hover:rotate-0 hover:-translate-y-4 transition-all relative group bg-dots">
