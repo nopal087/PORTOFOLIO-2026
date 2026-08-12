@@ -495,10 +495,10 @@ export default function Home() {
 <div className="flex flex-col md:flex-row gap-20 w-full md:w-2/3 justify-end">
 <div className="flex flex-col gap-6">
 <h4 className="font-display font-black text-3xl text-primary-fixed uppercase border-b-[4px] border-primary-fixed pb-4 inline-block">Navigation</h4>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-cyan-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#">Work</a>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-lime-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#">About</a>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#">Services</a>
-<a className="font-display font-bold text-xl hover:text-black hover:bg-primary-fixed uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#">Contact</a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-cyan-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#about">About</a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-lime-brutal uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#projects">Projects</a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-secondary-fixed-dim uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="/certifications">Certifications</a>
+<a className="font-display font-bold text-xl hover:text-black hover:bg-primary-fixed uppercase hover:translate-x-4 transition-all px-4 py-2 border-[3px] border-transparent hover:border-white inline-block" href="#contact">Contact</a>
 </div>
 <div className="flex flex-col gap-6">
 <h4 className="font-display font-black text-3xl text-secondary-fixed-dim uppercase border-b-[4px] border-secondary-fixed-dim pb-4 inline-block">Socials</h4>
