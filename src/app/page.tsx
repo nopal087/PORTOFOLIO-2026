@@ -425,11 +425,11 @@ export default function Home() {
             </h2>
           </div>
           {/*  Featured Project  */}
-          <div className="bg-cyan-brutal border-[8px] border-black shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] p-10 flex flex-col gap-10 transition-transform hover:-translate-y-4 relative bg-dots">
-            <div className="absolute -top-8 -left-8 bg-primary-fixed border-[6px] border-black px-8 py-3 font-display font-black text-3xl rotate-[-8deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform uppercase tracking-widest">
+          <div className="bg-cyan-brutal border-[4px] md:border-[8px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[24px_24px_0px_0px_rgba(0,0,0,1)] p-5 md:p-10 flex flex-col gap-6 md:gap-10 transition-transform hover:-translate-y-4 relative bg-dots">
+            <div className="absolute -top-4 -left-2 md:-top-8 md:-left-8 bg-primary-fixed border-[3px] md:border-[6px] border-black px-4 py-2 md:px-8 md:py-3 font-display font-black text-xl md:text-3xl rotate-[-8deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform uppercase tracking-widest">
               FEATURED
             </div>
-            <div className="w-full border-[6px] border-black overflow-hidden relative group bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+            <div className="w-full border-[4px] md:border-[6px] border-black overflow-hidden relative group bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-2 md:mt-0">
               <img
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
                 alt="A screenshot of WMS KAI Services website interface."
@@ -437,8 +437,8 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-primary-fixed opacity-0 group-hover:opacity-20 mix-blend-multiply transition-opacity duration-500"></div>
             </div>
-            <div className="w-full flex flex-col gap-8 justify-center bg-white p-8 border-[6px] border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative">
-              <div className="absolute top-4 right-4 bg-lime-brutal border-4 border-black w-12 h-12 rounded-full flex items-center justify-center animate-spin-slow">
+            <div className="w-full flex flex-col gap-6 md:gap-8 justify-center bg-white p-5 md:p-8 border-[4px] md:border-[6px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative">
+              <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-lime-brutal border-2 md:border-4 border-black w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center animate-spin-slow scale-75 md:scale-100">
                 <span className="material-symbols-outlined text-black">
                   star
                 </span>
