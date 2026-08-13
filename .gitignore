@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# binary/large files (not needed for code indexing)
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.webp
+code.html
+package-lock.json
