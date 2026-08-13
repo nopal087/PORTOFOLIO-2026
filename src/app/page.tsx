@@ -238,7 +238,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/*  Skills Box  */}
-            <div className="bg-surface-container-lowest border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative lg:col-span-4 bg-dots">
+            <div className="bg-secondary-fixed-dim border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative lg:col-span-4">
               <div className="absolute -top-8 -right-8 bg-cyan-brutal border-[5px] border-black p-3 font-display font-black text-2xl rotate-[20deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform cursor-crosshair">
                 CAPABILITIES
               </div>
@@ -247,7 +247,7 @@ export default function Home() {
               </h3>
               <ul className="flex flex-col gap-6 font-display font-bold text-xl uppercase bg-white p-6 border-[4px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <li className="border-b-[4px] border-black border-dotted pb-4">
-                  Full Stack (Next.js/Go)
+                  Full Stack
                 </li>
                 <li className="border-b-[4px] border-black border-dotted pb-4">
                   IT Infrastructure
@@ -256,13 +256,105 @@ export default function Home() {
                   Agentic AI &amp; LLMs
                 </li>
                 <li className="border-b-[4px] border-black border-dotted pb-4">
-                  DB (PostgreSQL)
+                  Database
                 </li>
                 <li className="pb-2">Network/Support</li>
               </ul>
             </div>
+            {/*  Tech Stack Box  */}
+            <div className="bg-lime-brutal border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative lg:col-span-4">
+              <div className="absolute -top-8 -left-8 bg-primary-fixed border-[5px] border-black p-3 font-display font-black text-2xl rotate-[-15deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform cursor-crosshair">
+                TOOLBOX
+              </div>
+              <h3 className="font-display text-[40px] font-black border-b-[6px] border-black pb-4 mb-8 uppercase bg-white p-2 inline-block whitespace-nowrap">
+                Tech Stack
+              </h3>
+              <div className="flex flex-col gap-6">
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">Frontend</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-cyan-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Next.js</span>
+                    <span className="bg-cyan-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">React</span>
+                    <span className="bg-cyan-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">TypeScript</span>
+                    <span className="bg-cyan-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Tailwind</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">Backend</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Golang</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Laravel</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">PHP</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Express.js</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Node.js</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">REST API</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">AI / Database</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">LangChain</span>
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">PostgreSQL</span>
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Supabase</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">DevOps / Tools</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Git</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Vercel</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Linux</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Figma</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  AI & Tools Box  */}
+            <div className="bg-cyan-brutal border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] relative lg:col-span-4">
+              <div className="absolute -top-8 -right-8 bg-secondary-fixed-dim border-[5px] border-black p-3 font-display font-black text-2xl rotate-[12deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform cursor-crosshair">
+                WORKFLOW
+              </div>
+              <h3 className="font-display text-[40px] font-black border-b-[6px] border-black pb-4 mb-8 uppercase bg-white p-2 inline-block">
+                AI &amp; Tools
+              </h3>
+              <div className="flex flex-col gap-5">
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">AI Agents</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-lime-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Antigravity</span>
+                    <span className="bg-lime-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Antigravity CLI</span>
+                    <span className="bg-lime-brutal border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Claude Code</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">AI IDE / Copilot</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Cursor</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">GitHub Copilot</span>
+                    <span className="bg-secondary-fixed-dim border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Windsurf</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">AI Assistant</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">ChatGPT</span>
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Gemini</span>
+                    <span className="bg-primary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Claude</span>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h4 className="font-display font-black text-sm uppercase mb-3 bg-black text-white px-2 py-1 inline-block">Dev Tools</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">VSCode</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Insomnia</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">Postman</span>
+                    <span className="bg-tertiary-fixed border-[3px] border-black px-3 py-1 font-display font-bold text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-transform cursor-default">DBeaver</span>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/*  Experience Box  */}
-            <div className="bg-tertiary-fixed border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] lg:col-span-8 relative">
+            <div className="bg-tertiary-fixed border-[6px] border-black p-10 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] lg:col-span-12 relative">
               <div className="absolute -top-8 -left-8 bg-lime-brutal border-[5px] border-black p-3 font-display font-black text-2xl rotate-[-15deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] z-10 hover:rotate-0 transition-transform">
                 TIMELINE
               </div>
@@ -476,12 +568,13 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <button className="mt-6 border-[6px] border-black bg-primary-fixed py-6 px-8 font-display font-black text-2xl hover:bg-black hover:text-primary-fixed transition-colors shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none uppercase tracking-widest group">
-                LAUNCH PROJECT{" "}
-                <span className="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">
-                  arrow_forward
+              <div className="mt-6 border-[6px] border-black bg-black py-4 px-8 font-display font-black text-xl uppercase tracking-widest inline-flex items-center gap-3 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <span className="material-symbols-outlined text-lime-brutal">
+                  lock
                 </span>
-              </button>
+                <span className="text-white">INTERNAL PROJECT</span>
+                <span className="bg-lime-brutal text-black px-3 py-1 text-sm border-[2px] border-white">ENTERPRISE</span>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
@@ -526,9 +619,12 @@ export default function Home() {
                   Trainmart (Reska), penilaian kinerja crew, hingga komunikasi
                   internal tim secara real-time.
                 </p>
-                <button className="mt-auto border-[5px] border-black bg-black text-white py-4 px-8 font-display font-black text-xl self-start hover:bg-lime-brutal hover:text-black transition-colors shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase active:translate-y-2 active:shadow-none">
-                  VIEW PROJECT
-                </button>
+                <div className="mt-auto border-[5px] border-black bg-black text-white py-3 px-6 font-display font-black text-lg self-start shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase inline-flex items-center gap-3">
+                  <span className="material-symbols-outlined text-lime-brutal text-xl">
+                    lock
+                  </span>
+                  INTERNAL PROJECT
+                </div>
               </div>
             </div>
             {/*  Card 3  */}
@@ -567,9 +663,12 @@ export default function Home() {
                   v4, dan dikembangkan secara interaktif dengan bantuan
                   teknologi Agentic AI terkini.
                 </p>
-                <button className="mt-auto border-[5px] border-black bg-black text-white py-4 px-8 font-display font-black text-xl self-start hover:bg-cyan-brutal hover:text-black transition-colors shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase active:translate-y-2 active:shadow-none">
-                  VIEW PROJECT
-                </button>
+                <div className="mt-auto border-[5px] border-black bg-black text-white py-3 px-6 font-display font-black text-lg self-start shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase inline-flex items-center gap-3">
+                  <span className="material-symbols-outlined text-cyan-brutal text-xl">
+                    lock
+                  </span>
+                  INTERNAL PROJECT
+                </div>
               </div>
             </div>
             {/*  Card 4  */}
@@ -609,9 +708,12 @@ export default function Home() {
                   (SP1-SP3) hingga penanganan pelanggaran berat (PHK Mendesak)
                   secara objektif, transparan, dan terukur.
                 </p>
-                <button className="mt-auto border-[5px] border-black bg-black text-white py-4 px-8 font-display font-black text-xl self-start hover:bg-primary-fixed hover:text-black transition-colors shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase active:translate-y-2 active:shadow-none">
-                  VIEW PROJECT
-                </button>
+                <div className="mt-auto border-[5px] border-black bg-black text-white py-3 px-6 font-display font-black text-lg self-start shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase inline-flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary-fixed text-xl">
+                    lock
+                  </span>
+                  INTERNAL PROJECT
+                </div>
               </div>
             </div>
           </div>
