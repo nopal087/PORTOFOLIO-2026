@@ -18,7 +18,7 @@ export default function Home() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative">
           {/*  Stickers  */}
           <div className="absolute -top-12 left-5 bg-cyan-brutal border-[5px] border-black px-6 py-2 font-display font-black text-3xl rotate-[-18deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform">
-            HELLO WORLD
+            HELLO I&apos;M NAUFAL
           </div>
           <div className="absolute bottom-24 left-1/3 bg-lime-brutal border-[5px] border-black px-6 py-2 font-display font-black text-2xl rotate-[25deg] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-20 hover:rotate-0 transition-transform hidden md:block">
             ! ERROR 404: BORING NOT FOUND
@@ -42,7 +42,7 @@ export default function Home() {
                 DEVELOPER
               </span>
               <br />
-              &amp; DESIGNER
+              <span className="text-[24px] sm:text-[32px] md:text-[65px] block md:-mt-1">&amp; AI ENTHUSIAST</span>
             </h1>
             <p className="font-body-lg text-lg md:text-2xl text-on-surface-variant max-w-xl bg-lime-brutal p-4 md:p-6 border-[4px] md:border-[5px] border-black font-black uppercase rotate-[1deg] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               IT Support &amp; Full Stack Developer. Focused on system

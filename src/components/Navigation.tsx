@@ -9,9 +9,12 @@ export default function Navigation() {
   return (
     <>
       <header className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 sticky top-0 z-50 bg-background dark:bg-inverse-surface border-b-[6px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-        <div className="font-display text-headline-md font-black text-on-surface dark:text-inverse-on-surface uppercase tracking-tighter bg-primary-fixed px-3 py-1 border-[4px] border-black rotate-[-3deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative z-50">
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="font-display text-headline-md font-black text-on-surface dark:text-inverse-on-surface uppercase tracking-tighter bg-primary-fixed px-3 py-1 border-[4px] border-black rotate-[-3deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 hover:scale-105 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all relative z-50 cursor-pointer"
+        >
           NPL DEV
-        </div>
+        </button>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-gutter items-center bg-cyan-brutal border-[4px] border-black px-8 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[2deg]">
