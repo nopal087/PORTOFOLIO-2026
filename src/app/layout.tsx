@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "NPL DEV | Portfolio",
   description: "IT Support & Full Stack Developer. I build brutal, beautiful, and highly functional digital experiences. Let's make something loud.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
