@@ -5,6 +5,11 @@ import Link from 'next/link';
 // Function to recursively read all PDF files
 function getCertificates(dir: string, baseRoute: string = ''): { name: string; url: string }[] {
   const certs: { name: string; url: string }[] = [];
+  
+  if (!fs.existsSync(dir)) {
+    return certs;
+  }
+
   const files = fs.readdirSync(dir);
 
   for (const file of files) {
