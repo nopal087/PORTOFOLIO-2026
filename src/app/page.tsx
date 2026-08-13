@@ -55,16 +55,7 @@ export default function Home() {
               >
                 LET&apos;S WORK TOGETHER
               </a>
-              <a
-                href="/CV-Muhammad%20Naufal%20Faruq-JULI-2026.pdf"
-                download="CV-Muhammad Naufal Faruq-JULI-2026.pdf"
-                className="bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] px-10 py-5 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all uppercase flex items-center justify-center gap-3 flex-grow"
-              >
-                RESUME{" "}
-                <span className="material-symbols-outlined text-3xl font-bold">
-                  download
-                </span>
-              </a>
+
             </div>
           </div>
           <div className="relative justify-self-center lg:justify-self-end w-[85%] md:w-full max-w-md aspect-[4/5] z-10 group mt-4 md:mt-0">
