@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
+# local artifacts & cache
+.cache/
+screen.png
 code.html
-package-lock.json

@@ -1,93 +1,189 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isCertificationsPage = pathname === "/certifications";
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  const navLinks = [
+    { name: "About", href: isCertificationsPage ? "/#about" : "#about" },
+    { name: "Skills", href: isCertificationsPage ? "/#system-info" : "#system-info" },
+    { name: "Experience", href: isCertificationsPage ? "/#experience" : "#experience" },
+    { name: "Projects", href: isCertificationsPage ? "/#projects" : "#projects" },
+    { name: "Certifications", href: "/certifications" },
+    { name: "Contact", href: isCertificationsPage ? "/#contact" : "#contact" },
+  ];
 
   return (
     <>
-      <header className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 sticky top-0 z-50 bg-background dark:bg-inverse-surface border-b-[6px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-        <button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-display text-headline-md font-black text-on-surface dark:text-inverse-on-surface uppercase tracking-tighter bg-primary-fixed px-3 py-1 border-[4px] border-black rotate-[-3deg] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 hover:scale-105 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all relative z-50 cursor-pointer"
-        >
-          NPL DEV
-        </button>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-gutter items-center bg-cyan-brutal border-[4px] border-black px-8 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[2deg]">
-          <a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#about">About</a>
-          <a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#projects">Projects</a>
-          <a className="text-on-surface font-display font-black text-lg hover:bg-black hover:text-white transition-colors px-4 py-2 border-[3px] border-transparent hover:border-black uppercase bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" href="#contact">Contact</a>
-        </nav>
-        
-        <a href="#contact" className="hidden md:block bg-secondary-fixed-dim text-black border-[5px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] px-8 py-3 font-display font-black text-xl hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] active:translate-y-2 active:shadow-none transition-all rotate-[-4deg] uppercase">
-          Hire Me
-        </a>
-        
-        {/* Mobile Menu Icon */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden border-[4px] border-black p-3 bg-primary-fixed shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:bg-lime-brutal transition-colors active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] relative z-50"
-        >
-          <span className="material-symbols-outlined font-bold text-3xl">
-            {isOpen ? "close" : "menu"}
-          </span>
-        </button>
+      <header className="sticky top-0 z-50 w-full bg-white border-b-[3px] md:border-b-[4px] border-black shadow-[0_4px_0_0_#000]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+          {/* Logo & Live Status */}
+          <div className="flex items-center gap-3">
+            <Link
+              href="/"
+              className="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-tighter bg-brutal-yellow px-3 py-1 border-[2.5px] md:border-[3px] border-black shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all inline-flex items-center gap-2"
+            >
+              <span>NPL DEV</span>
+            </Link>
+
+            <div className="hidden sm:flex items-center gap-2 bg-[#057642] text-white px-3 py-1 text-xs font-display font-black uppercase border-2 border-black tracking-wider shadow-[2px_2px_0_0_#000] hover:scale-105 transition-transform">
+              <span className="w-2 h-2 rounded-full bg-emerald-200 animate-pulse"></span>
+              <span>#OpenToWork</span>
+            </div>
+          </div>
+
+          {/* Desktop Nav Links */}
+          <nav className="hidden lg:flex items-center gap-1.5">
+            {navLinks.map((link) => {
+              const isActive = isCertificationsPage && link.href === "/certifications";
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`font-display font-bold text-sm uppercase px-3.5 py-1.5 border-2 transition-all rounded-none text-ink cursor-pointer ${
+                    isActive
+                      ? "bg-brutal-yellow border-black shadow-[2.5px_2.5px_0_0_#000]"
+                      : "border-transparent hover:border-black hover:bg-brutal-yellow hover:text-black hover:shadow-[2.5px_2.5px_0_0_#000]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Desktop CTA Action Group */}
+          <div className="hidden sm:flex items-center gap-3">
+            <a
+              href="/CV-Muhammad-Naufal-Faruq.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display font-black text-xs md:text-sm uppercase bg-white text-black px-3.5 py-2 border-[2.5px] border-black shadow-[3px_3px_0_0_#000] hover:-translate-y-0.5 hover:bg-brutal-cyan hover:shadow-[4px_4px_0_0_#000] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#000] transition-all inline-flex items-center gap-1.5"
+            >
+              <span className="material-symbols-outlined text-base">download</span>
+              <span>CV</span>
+            </a>
+
+            <a
+              href={isCertificationsPage ? "/#contact" : "#contact"}
+              className="font-display font-black text-xs md:text-sm uppercase bg-black text-white px-4 py-2 border-[2.5px] border-black shadow-[3px_3px_0_0_#ffe600] hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_#ffe600] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#ffe600] transition-all inline-flex items-center gap-1.5"
+            >
+              <span>Hire Me</span>
+              <span className="material-symbols-outlined text-base text-brutal-yellow">arrow_forward</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href="/CV-Muhammad-Naufal-Faruq.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sm:hidden font-display font-black text-xs uppercase bg-white text-black px-2.5 py-1.5 border-2 border-black shadow-[2px_2px_0_0_#000] active:translate-y-0.5 active:shadow-none"
+              aria-label="Download CV"
+            >
+              <span className="material-symbols-outlined text-sm">download</span>
+            </a>
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 border-[2.5px] border-black bg-brutal-yellow shadow-[3px_3px_0_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer flex items-center justify-center"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isOpen}
+            >
+              <span className="material-symbols-outlined text-2xl font-bold">
+                {isOpen ? "close" : "menu"}
+              </span>
+            </button>
+          </div>
+        </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 bg-lime-brutal z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out border-b-[8px] border-black overflow-hidden bg-stripes ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        {/* Decorative elements for mobile menu */}
-        <div className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 border-[4px] sm:border-[6px] border-black bg-cyan-brutal rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 right-4 sm:right-10 w-16 h-16 sm:w-24 sm:h-24 border-[4px] sm:border-[6px] border-black bg-primary-fixed rotate-45"></div>
-        <div className="absolute top-1/2 -left-2 text-black text-4xl sm:text-6xl font-black opacity-20 rotate-90 tracking-widest">MENU</div>
-        
-        <nav className="flex flex-col gap-4 sm:gap-6 w-[85%] sm:w-3/4 max-w-sm relative z-10 mt-12">
-          <a 
-            href="#about" 
-            onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-white border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[-2deg]"
+      {/* Mobile Drawer / Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 top-16 md:top-20 z-40 bg-black/60 backdrop-blur-sm lg:hidden animate-fade-in"
+          onClick={() => setIsOpen(false)}
+        >
+          <div 
+            className="w-full bg-white border-b-[4px] border-black shadow-[0_8px_0_0_#000] p-6 flex flex-col gap-4 max-h-[calc(100vh-4rem)] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
           >
-            About
-          </a>
-          <a 
-            href="#projects" 
-            onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-cyan-brutal border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[1deg]"
-          >
-            Projects
-          </a>
-          <a 
-            href="/certifications" 
-            onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-primary-fixed border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[-1deg]"
-          >
-            Certifications
-          </a>
-          <a 
-            href="#contact" 
-            onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-secondary-fixed-dim border-[4px] sm:border-[6px] border-black py-3 sm:py-4 font-display font-black text-xl sm:text-3xl uppercase shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-[2px_2px_0px_0px_#000] transition-all rotate-[2deg]"
-          >
-            Contact
-          </a>
-          <div className="w-full border-t-[4px] sm:border-t-[6px] border-black border-dashed my-1 sm:my-2"></div>
-          <a 
-            href="#contact" 
-            onClick={() => setIsOpen(false)}
-            className="w-full flex justify-center items-center gap-2 bg-black text-white border-[4px] sm:border-[6px] border-primary-fixed py-3 sm:py-5 font-display font-black text-xl sm:text-3xl uppercase shadow-[8px_8px_0px_0px_#fde400] hover:-translate-y-1 active:translate-y-1 transition-all"
-          >
-            Hire Me <span className="material-symbols-outlined">rocket_launch</span>
-          </a>
-        </nav>
-      </div>
+            {/* Status bar */}
+            <div className="flex items-center justify-between bg-[#057642] text-white p-3 border-2 border-black shadow-[3px_3px_0_0_#000]">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-200">Status</span>
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-200 animate-pulse"></span>
+                <span className="text-xs font-display font-black uppercase text-white tracking-wide">#OpenToWork (Full-Time &amp; Projects)</span>
+              </div>
+            </div>
+
+            {/* Links */}
+            <nav className="flex flex-col gap-2.5">
+              {navLinks.map((link, idx) => {
+                const colors = ["bg-brutal-yellow", "bg-brutal-cyan", "bg-brutal-lime-electric", "bg-brutal-pink-light", "bg-brutal-purple", "bg-white"];
+                const colorClass = colors[idx % colors.length];
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`w-full py-3 px-4 font-display font-black text-lg uppercase border-[2.5px] border-black shadow-[3px_3px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center justify-between ${colorClass}`}
+                  >
+                    <span>{link.name}</span>
+                    <span className="material-symbols-outlined text-xl">arrow_forward</span>
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2 border-t-2 border-black border-dashed">
+              <a
+                href="/CV-Muhammad-Naufal-Faruq.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="w-full py-3 px-4 text-center font-display font-black text-base uppercase bg-white text-black border-[2.5px] border-black shadow-[3px_3px_0_0_#000] active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-lg">download</span>
+                <span>Download CV (PDF)</span>
+              </a>
+
+              <a
+                href={isCertificationsPage ? "/#contact" : "#contact"}
+                onClick={() => setIsOpen(false)}
+                className="w-full py-3 px-4 text-center font-display font-black text-base uppercase bg-black text-white border-[2.5px] border-black shadow-[3px_3px_0_0_#ffe600] active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2"
+              >
+                <span>Let&apos;s Connect</span>
+                <span className="material-symbols-outlined text-lg text-brutal-yellow">rocket_launch</span>
+              </a>
+            </div>
+
+            {/* Direct contact info footer */}
+            <div className="text-center text-xs font-mono text-zinc-600 font-bold pt-2">
+              Pekalongan / Semarang, Indonesia • naufalfaruq285@gmail.com
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
