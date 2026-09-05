@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Providers from "@/components/Providers";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -40,7 +41,7 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="bg-canvas text-ink font-body min-h-screen flex flex-col relative overflow-x-hidden antialiased selection:bg-black selection:text-brutal-yellow">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

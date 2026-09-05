@@ -1,7 +1,26 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import ResparkingProject from "@/components/ResparkingProject";
+import WmsProject from "@/components/WmsProject";
+import LokoCafeProject from "@/components/LokoCafeProject";
+import IrisProject from "@/components/IrisProject";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 
 export default function Home() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("naufalfaruq285@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <>
       {/* Background Decor Grids & Ambient Accents */}
@@ -14,7 +33,7 @@ export default function Home() {
       {/* Navigation Header */}
       <Navigation />
 
-      <main className="flex-grow flex flex-col px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 gap-16 sm:gap-24 md:gap-32 max-w-7xl mx-auto w-full">
+      <main className="flex-grow flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 md:py-16 gap-16 sm:gap-24 md:gap-32 w-full max-w-[1720px] 2xl:max-w-[1920px] mx-auto">
         
         {/* ========================================================================= */}
         {/* HERO SECTION */}
@@ -28,34 +47,56 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-2.5">
               <span className="bg-brutal-yellow text-black border-2 md:border-[3px] border-black px-3.5 py-1 font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0_0_#000] hover:rotate-1 transition-transform inline-flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-base">bolt</span>
-                <span>IT Support &amp; Full Stack Dev</span>
+                <span>{t.hero.role1}</span>
               </span>
               <span className="bg-brutal-lime-electric text-black border-2 md:border-[3px] border-black px-3.5 py-1 font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0_0_#000] hover:-rotate-1 transition-transform inline-flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-base">smart_toy</span>
-                <span>Agentic AI Specialist</span>
+                <span>{t.hero.role2}</span>
               </span>
             </div>
 
             {/* Main Headline */}
             <div className="w-full">
               <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tighter text-ink">
-                BUILDING <br />
-                <span className="bg-black text-brutal-yellow px-2.5 sm:px-4 py-0.5 inline-block transform -skew-x-6 my-1 shadow-[4px_4px_0_0_#00e5ff]">
-                  RELIABLE
-                </span>{" "}
-                <br className="hidden sm:inline" />
-                SYSTEMS &amp; AI
+                {lang === "en" ? (
+                  <>
+                    BUILDING <br />
+                    <span className="bg-black text-brutal-yellow px-2.5 sm:px-4 py-0.5 inline-block transform -skew-x-6 my-1 shadow-[4px_4px_0_0_#00e5ff]">
+                      RELIABLE
+                    </span>{" "}
+                    <br className="hidden sm:inline" />
+                    SYSTEMS &amp; AI
+                  </>
+                ) : (
+                  <>
+                    MEMBANGUN <br />
+                    <span className="bg-black text-brutal-yellow px-2.5 sm:px-4 py-0.5 inline-block transform -skew-x-6 my-1 shadow-[4px_4px_0_0_#00e5ff]">
+                      SISTEM HANDAL
+                    </span>{" "}
+                    <br className="hidden sm:inline" />
+                    &amp; TEKNOLOGI AI
+                  </>
+                )}
               </h1>
             </div>
 
             {/* Value Proposition Description */}
             <div className="bg-white border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] md:shadow-[8px_8px_0_0_#000] w-full relative">
               <div className="absolute -top-3 right-4 bg-brutal-pink text-white font-mono font-black text-[10px] sm:text-xs uppercase px-2.5 py-0.5 border-2 border-black shadow-[2px_2px_0_0_#000] rotate-1">
-                SOLVING COMPLEX TECH
+                {lang === "en" ? "SOLVING COMPLEX TECH" : "SOLUSI TEKNOLOGI NYATA"}
               </div>
               <p className="font-body text-base sm:text-lg md:text-xl font-bold text-ink leading-relaxed">
-                Hi, I&apos;m <span className="bg-brutal-yellow px-2 py-0.5 border-2 border-black font-black shadow-[2px_2px_0_0_#000]">Muhammad Naufal Faruq</span>. 
-                I build high-concurrency web applications (Next.js &amp; Golang), maintain enterprise IT infrastructure, and engineer autonomous Agentic AI workflows to accelerate software delivery.
+                {lang === "en" ? (
+                  <>
+                    Hi, I&apos;m <span className="bg-brutal-yellow px-2 py-0.5 border-2 border-black font-black shadow-[2px_2px_0_0_#000]">Muhammad Naufal Faruq</span>. 
+                    I build high-concurrency web applications (Next.js &amp; Golang), maintain enterprise IT infrastructure, and engineer autonomous Agentic AI workflows to accelerate software delivery.
+                  </>
+                ) : (
+                  <>
+                    Halo, saya <span className="bg-brutal-yellow px-2 py-0.5 border-2 border-black font-black shadow-[2px_2px_0_0_#000]">Muhammad Naufal Faruq</span>. 
+                    Saya membangun aplikasi web berkonkurensi tinggi (Next.js &amp; Golang), mengelola infrastruktur IT enterprise, dan merancang alur kerja Agentic AI otonom untuk mempercepat pengiriman software.
+                  </>
+                )}
               </p>
             </div>
 
@@ -65,7 +106,7 @@ export default function Home() {
                 href="#projects"
                 className="bg-black text-white border-[3px] md:border-[3.5px] border-black px-6 py-3.5 sm:py-4 font-display font-black text-base sm:text-lg uppercase text-center shadow-[4px_4px_0_0_#ffe600] hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#ffe600] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#ffe600] transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Explore Projects</span>
+                <span>{t.hero.viewProjects}</span>
                 <span className="material-symbols-outlined text-xl text-brutal-yellow">arrow_downward</span>
               </a>
 
@@ -76,24 +117,24 @@ export default function Home() {
                 className="bg-brutal-yellow text-black border-[3px] md:border-[3.5px] border-black px-6 py-3.5 sm:py-4 font-display font-black text-base sm:text-lg uppercase text-center shadow-[4px_4px_0_0_#000] hover:-translate-y-0.5 hover:bg-brutal-yellow-dark hover:shadow-[6px_6px_0_0_#000] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#000] transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span className="material-symbols-outlined text-xl">download</span>
-                <span>Download CV</span>
+                <span>CV (PDF)</span>
               </a>
 
               <a
                 href="#contact"
                 className="bg-brutal-cyan text-black border-[3px] md:border-[3.5px] border-black px-5 py-3.5 sm:py-4 font-display font-black text-base sm:text-lg uppercase text-center shadow-[4px_4px_0_0_#000] hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[6px_6px_0_0_#000] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#000] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                <span>Contact</span>
+                <span>{t.nav.contact}</span>
               </a>
             </div>
 
             {/* Quick Link Pills */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2 text-xs sm:text-sm font-mono font-bold">
               <span className="flex items-center gap-1.5 bg-white px-3 py-1 border-2 border-black shadow-[2px_2px_0_0_#000]">
-                <span className="material-symbols-outlined text-base text-brutal-blue">pin_drop</span> Pekalongan / Semarang
+                <span className="material-symbols-outlined text-base text-brutal-blue">pin_drop</span> {t.hero.basedIn}
               </span>
               <span className="flex items-center gap-1.5 bg-white px-3 py-1 border-2 border-black shadow-[2px_2px_0_0_#000]">
-                <span className="material-symbols-outlined text-base text-brutal-pink">school</span> S1 Teknik Informatika (3.77 GPA)
+                <span className="material-symbols-outlined text-base text-brutal-pink">school</span> {t.education.degreeTitle} (3.77 GPA)
               </span>
             </div>
           </div>
@@ -112,13 +153,13 @@ export default function Home() {
                 {/* LinkedIn #OpenToWork Badge Sticker */}
                 <div className="absolute -top-4 -left-2 bg-[#057642] text-white border-2 md:border-[3px] border-black px-3 py-1 font-display font-black text-xs uppercase shadow-[2.5px_2.5px_0_0_#000] -rotate-3 z-20 inline-flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-200 animate-pulse"></span>
-                  <span>#OpenToWork</span>
+                  <span>{t.nav.openToWork}</span>
                 </div>
 
                 {/* Top Badge Sticker */}
                 <div className="absolute -top-4 -right-2 bg-brutal-yellow border-2 md:border-[3px] border-black px-3.5 py-1 font-display font-black text-xs uppercase shadow-[2.5px_2.5px_0_0_#000] rotate-3 z-20 inline-flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">verified</span>
-                  <span>3+ Yrs Exp</span>
+                  <span>{lang === "en" ? "3+ Yrs Exp" : "3+ Thn Pengalaman"}</span>
                 </div>
 
                 {/* Profile Image Frame */}
@@ -134,7 +175,7 @@ export default function Home() {
                   <div className="absolute bottom-3 left-3 right-3 bg-black/95 text-white p-3 border-2 border-brutal-yellow flex items-center justify-between shadow-[3px_3px_0_0_#ffe600]">
                     <div>
                       <div className="font-display font-black text-sm uppercase text-brutal-yellow">Muhammad Naufal Faruq</div>
-                      <div className="text-[11px] font-mono text-zinc-300">IT Support &amp; Full Stack Dev</div>
+                      <div className="text-[11px] font-mono text-zinc-300">{t.hero.role1}</div>
                     </div>
                     <span className="w-3 h-3 rounded-full bg-brutal-lime-electric animate-pulse"></span>
                   </div>
@@ -162,34 +203,34 @@ export default function Home() {
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 md:gap-6">
           
           <div className="bg-brutal-yellow border-[3px] md:border-[4px] border-black p-4 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">EXPERIENCE</span>
+            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">{t.stats.experienceTitle}</span>
             <div>
-              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">3+ YRS</div>
-              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">IT Infrastructure &amp; Web Dev</p>
+              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">{t.stats.experienceValue}</div>
+              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">{t.stats.experienceDesc}</p>
             </div>
           </div>
 
           <div className="bg-brutal-cyan border-[3px] md:border-[4px] border-black p-4 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">PRODUCTION</span>
+            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">{t.stats.productionTitle}</span>
             <div>
-              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">4+ APPS</div>
-              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">Enterprise Systems Built</p>
+              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">{t.stats.productionValue}</div>
+              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">{t.stats.productionDesc}</p>
             </div>
           </div>
 
           <div className="bg-brutal-lime-electric border-[3px] md:border-[4px] border-black p-4 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">CREDENTIALS</span>
+            <span className="font-mono text-xs uppercase font-black text-zinc-900 border-b-2 border-black pb-1.5 mb-2">{t.stats.credentialsTitle}</span>
             <div>
-              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">20+ CERTS</div>
-              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">AI, Python &amp; Cloud Certified</p>
+              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-black">{t.stats.credentialsValue}</div>
+              <p className="font-body text-xs sm:text-sm font-bold text-zinc-900 mt-1">{t.stats.credentialsDesc}</p>
             </div>
           </div>
 
           <div className="bg-brutal-pink border-[3px] md:border-[4px] border-black p-4 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between text-white hover:-translate-y-1 transition-transform">
-            <span className="font-mono text-xs uppercase font-black text-white border-b-2 border-white/40 pb-1.5 mb-2">SUPPORT SLA</span>
+            <span className="font-mono text-xs uppercase font-black text-white border-b-2 border-white/40 pb-1.5 mb-2">{t.stats.supportTitle}</span>
             <div>
-              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white">98% SLA</div>
-              <p className="font-body text-xs sm:text-sm font-bold text-white mt-1">120+ Monthly Tickets Solved</p>
+              <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white">{t.stats.supportValue}</div>
+              <p className="font-body text-xs sm:text-sm font-bold text-white mt-1">{t.stats.supportDesc}</p>
             </div>
           </div>
 
@@ -202,37 +243,37 @@ export default function Home() {
           <div className="flex w-max animate-marquee" style={{ animation: "marquee 22s linear infinite" }}>
             <div className="flex gap-8 sm:gap-12 pr-8 sm:pr-12 items-center font-display font-black text-lg sm:text-2xl uppercase tracking-wider">
               <span className="flex items-center gap-2 text-brutal-yellow">
-                <span className="material-symbols-outlined">terminal</span> FULL STACK ENGINEERING
+                <span className="material-symbols-outlined">terminal</span> {t.marquee.fullstack}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-cyan">
-                <span className="material-symbols-outlined">psychology</span> AGENTIC AI WORKFLOWS
+                <span className="material-symbols-outlined">psychology</span> {t.marquee.agenticAi}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-lime-electric">
-                <span className="material-symbols-outlined">dns</span> IT INFRASTRUCTURE &amp; NETWORKING
+                <span className="material-symbols-outlined">dns</span> {t.marquee.infra}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-pink">
-                <span className="material-symbols-outlined">bolt</span> GOLANG &amp; NEXT.JS APPS
+                <span className="material-symbols-outlined">bolt</span> {t.marquee.golangNext}
               </span>
               <span className="text-zinc-600">✦</span>
             </div>
             <div className="flex gap-8 sm:gap-12 pr-8 sm:pr-12 items-center font-display font-black text-lg sm:text-2xl uppercase tracking-wider">
               <span className="flex items-center gap-2 text-brutal-yellow">
-                <span className="material-symbols-outlined">terminal</span> FULL STACK ENGINEERING
+                <span className="material-symbols-outlined">terminal</span> {t.marquee.fullstack}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-cyan">
-                <span className="material-symbols-outlined">psychology</span> AGENTIC AI WORKFLOWS
+                <span className="material-symbols-outlined">psychology</span> {t.marquee.agenticAi}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-lime-electric">
-                <span className="material-symbols-outlined">dns</span> IT INFRASTRUCTURE &amp; NETWORKING
+                <span className="material-symbols-outlined">dns</span> {t.marquee.infra}
               </span>
               <span className="text-zinc-600">✦</span>
               <span className="flex items-center gap-2 text-brutal-pink">
-                <span className="material-symbols-outlined">bolt</span> GOLANG &amp; NEXT.JS APPS
+                <span className="material-symbols-outlined">bolt</span> {t.marquee.golangNext}
               </span>
               <span className="text-zinc-600">✦</span>
             </div>
@@ -247,7 +288,7 @@ export default function Home() {
           {/* Section Title */}
           <div className="flex items-center gap-3">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black uppercase bg-black text-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_#ffe600]">
-              01 // About Me
+              {`${t.about.sectionNum} // ${t.about.sectionTitle}`}
             </h2>
             <span className="h-[3px] flex-grow bg-black hidden sm:block"></span>
           </div>
@@ -259,31 +300,31 @@ export default function Home() {
               {/* Left Column: Overview Story */}
               <div className="lg:col-span-7 flex flex-col gap-5">
                 <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-black uppercase leading-tight text-ink">
-                  Bridging Software Engineering, System Reliability, &amp; Artificial Intelligence
+                  {t.about.title}
                 </h3>
                 
                 <p className="font-body text-base sm:text-lg font-medium text-zinc-900 leading-relaxed">
-                  With over 3 years of hands-on experience spanning enterprise web development, IT systems support, and network infrastructure, I specialize in architecting solutions that solve tangible operational challenges.
+                  {t.about.p1}
                 </p>
 
                 <p className="font-body text-base sm:text-lg font-medium text-zinc-900 leading-relaxed bg-brutal-yellow/20 p-4 border-l-[6px] border-brutal-yellow border-y border-r border-black/10">
-                  In today&apos;s AI-driven era, I proactively leverage <strong>Agentic AI &amp; LLM-assisted workflows</strong> (such as Claude Code, Antigravity, and autonomous agent loops) to accelerate the software development lifecycle by 2-3x while maintaining rock-solid architectural standards.
+                  {t.about.p2}
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <div className="p-3 bg-brutal-cyan/20 border-2 border-black shadow-[2px_2px_0_0_#000]">
                     <span className="font-display font-black text-sm uppercase flex items-center gap-1.5 mb-1">
                       <span className="material-symbols-outlined text-base text-brutal-blue">location_on</span>
-                      <span>Location</span>
+                      <span>{lang === "en" ? "Location" : "Lokasi"}</span>
                     </span>
-                    <span className="text-sm font-bold text-zinc-800">Pekalongan / Semarang, Central Java</span>
+                    <span className="text-sm font-bold text-zinc-800">{t.about.specLocation}</span>
                   </div>
                   <div className="p-3 bg-brutal-lime-electric/20 border-2 border-black shadow-[2px_2px_0_0_#000]">
                     <span className="font-display font-black text-sm uppercase flex items-center gap-1.5 mb-1">
                       <span className="material-symbols-outlined text-base text-brutal-pink">school</span>
-                      <span>Degree</span>
+                      <span>{lang === "en" ? "Degree" : "Pendidikan"}</span>
                     </span>
-                    <span className="text-sm font-bold text-zinc-800">S.Kom (Informatics) - 3.77 GPA</span>
+                    <span className="text-sm font-bold text-zinc-800">{t.about.specEducation}</span>
                   </div>
                 </div>
               </div>
@@ -293,30 +334,42 @@ export default function Home() {
                 <div className="bg-brutal-yellow border-[3px] border-black p-4 sm:p-5 shadow-[4px_4px_0_0_#000] hover:-translate-y-0.5 transition-transform">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="material-symbols-outlined text-2xl font-bold bg-black text-brutal-yellow p-1">code</span>
-                    <h4 className="font-display font-black text-base uppercase">Full Stack Engineering</h4>
+                    <h4 className="font-display font-black text-base uppercase">
+                      {lang === "en" ? "Full Stack Engineering" : "Rekayasa Full Stack"}
+                    </h4>
                   </div>
                   <p className="text-xs sm:text-sm font-bold text-zinc-900 leading-relaxed">
-                    Building robust frontend UIs (Next.js, React, TypeScript) and high-concurrency backend services (Golang, PostgreSQL, PHP).
+                    {lang === "en"
+                      ? "Building robust frontend UIs (Next.js, React, TypeScript) and high-concurrency backend services (Golang, PostgreSQL, PHP)."
+                      : "Membangun antarmuka modern (Next.js, React, TypeScript) dan layanan backend berkecepatan tinggi (Golang, PostgreSQL, PHP)."}
                   </p>
                 </div>
 
                 <div className="bg-brutal-cyan border-[3px] border-black p-4 sm:p-5 shadow-[4px_4px_0_0_#000] hover:-translate-y-0.5 transition-transform">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="material-symbols-outlined text-2xl font-bold bg-black text-brutal-cyan p-1">router</span>
-                    <h4 className="font-display font-black text-base uppercase">IT Infrastructure &amp; SLA</h4>
+                    <h4 className="font-display font-black text-base uppercase">
+                      {lang === "en" ? "IT Infrastructure & SLA" : "Infrastruktur IT & SLA"}
+                    </h4>
                   </div>
                   <p className="text-xs sm:text-sm font-bold text-zinc-900 leading-relaxed">
-                    Managing LAN/Wi-Fi network topology, hardware maintenance, e-Channel systems, and maintaining a 98% resolution SLA.
+                    {lang === "en"
+                      ? "Managing LAN/Wi-Fi network topology, hardware maintenance, e-Channel systems, and maintaining a 98% resolution SLA."
+                      : "Mengelola topologi jaringan LAN/Wi-Fi, perawatan perangkat keras workstation, dan mempertahankan SLA resolusi 98%."}
                   </p>
                 </div>
 
                 <div className="bg-brutal-lime-electric border-[3px] border-black p-4 sm:p-5 shadow-[4px_4px_0_0_#000] hover:-translate-y-0.5 transition-transform">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="material-symbols-outlined text-2xl font-bold bg-black text-brutal-lime-electric p-1">smart_toy</span>
-                    <h4 className="font-display font-black text-base uppercase">Agentic AI &amp; Automation</h4>
+                    <h4 className="font-display font-black text-base uppercase">
+                      {lang === "en" ? "Agentic AI & Automation" : "Agentic AI & Otomasi"}
+                    </h4>
                   </div>
                   <p className="text-xs sm:text-sm font-bold text-zinc-900 leading-relaxed">
-                    Implementing autonomous coding agents, custom prompt engineering, and intelligent workflow automation.
+                    {lang === "en"
+                      ? "Implementing autonomous coding agents, custom prompt engineering, and intelligent workflow automation."
+                      : "Menerapkan agen AI otonom, rekayasa prompt tingkat lanjut, dan percepatan siklus rilis fitur 2-3x lebih cepat."}
                   </p>
                 </div>
               </div>
@@ -333,7 +386,7 @@ export default function Home() {
           {/* Section Title */}
           <div className="flex items-center gap-3">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black uppercase bg-black text-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_#00e5ff]">
-              02 // System Info &amp; Tech Stack
+              02 // {lang === "en" ? "System Info & Tech Stack" : "Info Sistem & Tech Stack"}
             </h2>
             <span className="h-[3px] flex-grow bg-black hidden sm:block"></span>
           </div>
@@ -344,7 +397,7 @@ export default function Home() {
             <div className="bg-brutal-yellow border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
               <div>
                 <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
-                  <h3 className="font-display font-black text-lg uppercase text-black">Frontend</h3>
+                  <h3 className="font-display font-black text-lg uppercase text-black">{t.about.stackCat1Title}</h3>
                   <span className="material-symbols-outlined text-2xl bg-black text-white p-1">devices</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -356,7 +409,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black text-xs font-mono font-bold text-zinc-900">
-                {"// Responsive, Fast, Accessible"}
+                {t.about.stackCat1Sub}
               </div>
             </div>
 
@@ -364,7 +417,7 @@ export default function Home() {
             <div className="bg-brutal-cyan border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
               <div>
                 <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
-                  <h3 className="font-display font-black text-lg uppercase text-black">Backend &amp; API</h3>
+                  <h3 className="font-display font-black text-lg uppercase text-black">{t.about.stackCat2Title}</h3>
                   <span className="material-symbols-outlined text-2xl bg-black text-white p-1">memory</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -376,7 +429,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black text-xs font-mono font-bold text-zinc-900">
-                {"// High Concurrency & Throughput"}
+                {t.about.stackCat2Sub}
               </div>
             </div>
 
@@ -384,7 +437,7 @@ export default function Home() {
             <div className="bg-brutal-lime-electric border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
               <div>
                 <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
-                  <h3 className="font-display font-black text-lg uppercase text-black">AI &amp; Agents</h3>
+                  <h3 className="font-display font-black text-lg uppercase text-black">{t.about.stackCat3Title}</h3>
                   <span className="material-symbols-outlined text-2xl bg-black text-white p-1">psychology</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -396,7 +449,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black text-xs font-mono font-bold text-zinc-900">
-                {"// 2-3x Accelerated SDLC"}
+                {t.about.stackCat3Sub}
               </div>
             </div>
 
@@ -404,7 +457,7 @@ export default function Home() {
             <div className="bg-secondary-fixed-dim border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between hover:-translate-y-1 transition-transform">
               <div>
                 <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
-                  <h3 className="font-display font-black text-lg uppercase text-black">Cloud &amp; Infra</h3>
+                  <h3 className="font-display font-black text-lg uppercase text-black">{t.about.stackCat4Title}</h3>
                   <span className="material-symbols-outlined text-2xl bg-black text-white p-1">dns</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -416,7 +469,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black text-xs font-mono font-bold text-zinc-900">
-                {"// 98% Support SLA Availability"}
+                {t.about.stackCat4Sub}
               </div>
             </div>
 
@@ -431,7 +484,7 @@ export default function Home() {
           {/* Section Title */}
           <div className="flex items-center gap-3">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black uppercase bg-black text-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_#b8ff00]">
-              03 // Experience
+              {`${t.experience.sectionNum} // ${t.experience.sectionTitle}`}
             </h2>
             <span className="h-[3px] flex-grow bg-black hidden sm:block"></span>
           </div>
@@ -444,49 +497,33 @@ export default function Home() {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="bg-brutal-yellow text-black border-2 border-black px-3 py-0.5 font-display font-black text-xs uppercase shadow-[2px_2px_0_0_#000]">
-                      Current Role
+                      {t.experience.job1Badge}
                     </span>
                     <span className="bg-black text-brutal-lime-electric px-3 py-0.5 font-mono text-xs uppercase font-bold">
                       Enterprise KAI
                     </span>
                   </div>
                   <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase text-ink">
-                    IT Support &amp; Developer
+                    {t.experience.job1Role}
                   </h3>
                   <h4 className="font-body font-bold text-base sm:text-lg text-zinc-800">
-                    PT Reska Multi Usaha (KAI Services) • Semarang, Indonesia
+                    {t.experience.job1Company}
                   </h4>
                 </div>
                 <div className="bg-brutal-lime-electric border-2 border-black px-3.5 py-1.5 font-mono font-bold text-xs sm:text-sm shadow-[2px_2px_0_0_#000] self-start lg:self-auto">
-                  Nov 2025 – Present
+                  {t.experience.job1Period}
                 </div>
               </div>
 
               <div className="flex flex-col gap-3 font-body text-sm sm:text-base text-zinc-900">
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    <strong>End-to-End Enterprise Web Apps:</strong> Architected and engineered high-impact operational systems, including the <strong>Warehouse Management System (WMS)</strong> and <strong>Loko Cafe Management System</strong> using Next.js (App Router) and Golang.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    <strong>WMS Real-time Logistics:</strong> Designed live item tracking, barcode scanning, and multi-tier shelf location management to eliminate manual discrepancies in Regional Office 04 Semarang.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    <strong>AI-Assisted Acceleration:</strong> Integrated autonomous Agentic AI workflows to expedite development cycles by 2-3x while maintaining comprehensive test coverage.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    <strong>Infrastructure Support:</strong> Overseeing preventive maintenance, LAN/Wi-Fi troubleshooting, and hardware configurations to guarantee operational continuity.
-                  </p>
-                </div>
+                {t.experience.job1Points.map((pt, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5">
+                    <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
+                    <p>
+                      <strong>{pt.title}</strong> {pt.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t-2 border-black border-dashed">
@@ -504,47 +541,37 @@ export default function Home() {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="bg-brutal-cyan text-black border-2 border-black px-3 py-0.5 font-display font-black text-xs uppercase shadow-[2px_2px_0_0_#000]">
-                      Banking IT
+                      {t.experience.job2Badge}
                     </span>
                     <span className="bg-black text-white px-3 py-0.5 font-mono text-xs uppercase font-bold">
                       SLA 98%
                     </span>
                   </div>
                   <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase text-ink">
-                    IT Support &amp; Archive Systems
+                    {t.experience.job2Role}
                   </h3>
                   <h4 className="font-body font-bold text-base sm:text-lg text-zinc-800">
-                    PT Bank Rakyat Indonesia (Persero) Tbk • KC Yogyakarta Katamso
+                    {t.experience.job2Company}
                   </h4>
                 </div>
-                <div className="bg-brutal-cyan border-2 border-black px-3.5 py-1.5 font-mono font-bold text-xs sm:text-sm shadow-[2px_2px_0_0_#000] self-start lg:self-auto">
-                  Aug 2023 – Jan 2025
+                <div className="bg-brutal-yellow border-2 border-black px-3.5 py-1.5 font-mono font-bold text-xs sm:text-sm shadow-[2px_2px_0_0_#000] self-start lg:self-auto">
+                  {t.experience.job2Period}
                 </div>
               </div>
 
               <div className="flex flex-col gap-3 font-body text-sm sm:text-base text-zinc-900">
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    Resolved <strong>120+ technical support tickets monthly</strong> with a 98% resolution SLA across client workstations, printers, core networks, and internal banking software.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    Maintained and monitored <strong>e-Channel infrastructure (ATM, CRM, EDC Merchant, UKO)</strong> and branch LAN/Wi-Fi systems, reducing hardware-related downtime by 30%.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    Performed security hardening and regular software updates across 100+ IT assets, ensuring compliance during internal audits.
-                  </p>
-                </div>
+                {t.experience.job2Points.map((pt, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5">
+                    <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
+                    <p>
+                      <strong>{pt.title}</strong> {pt.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t-2 border-black border-dashed">
-                {["IT Support", "LAN / Wi-Fi", "ATM & e-Channel", "System Hardening", "Hardware SLA", "Inventory Audit"].map((badge) => (
+                {["IT Support", "Hardware Maintenance", "Digital Archive", "LAN Network", "Windows Server", "SLA 98%"].map((badge) => (
                   <span key={badge} className="bg-brutal-cyan/30 border border-black px-2.5 py-1 text-xs font-mono font-bold">
                     #{badge}
                   </span>
@@ -558,34 +585,28 @@ export default function Home() {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="bg-brutal-lime-electric text-black border-2 border-black px-3 py-0.5 font-display font-black text-xs uppercase shadow-[2px_2px_0_0_#000]">
-                      IoT &amp; Robotics
+                      {t.experience.job3Badge}
                     </span>
                   </div>
                   <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl uppercase text-ink">
-                    Software Engineer Intern
+                    {t.experience.job3Role}
                   </h3>
                   <h4 className="font-body font-bold text-base sm:text-lg text-zinc-800">
-                    PT Stechoq Robotika Indonesia • Yogyakarta, Indonesia
+                    {t.experience.job3Company}
                   </h4>
                 </div>
                 <div className="bg-brutal-yellow border-2 border-black px-3.5 py-1.5 font-mono font-bold text-xs sm:text-sm shadow-[2px_2px_0_0_#000] self-start lg:self-auto">
-                  Feb 2022 – Jun 2022
+                  {t.experience.job3Period}
                 </div>
               </div>
 
               <div className="flex flex-col gap-3 font-body text-sm sm:text-base text-zinc-900">
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    Engineered an automated <strong>Self-Checkout solution utilizing RFID technology</strong>, writing backend microservices with Express.js.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
-                  <p>
-                    Translated wireframes into high-fidelity interactive UI designs using Figma and conducted rigorous integration tests with RFID reader hardware.
-                  </p>
-                </div>
+                {t.experience.job3Points.map((desc, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5">
+                    <span className="material-symbols-outlined text-lg text-brutal-blue mt-0.5 font-bold">check_circle</span>
+                    <p>{desc}</p>
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t-2 border-black border-dashed">
@@ -610,23 +631,23 @@ export default function Home() {
             <div>
               <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
                 <span className="bg-black text-white font-display font-black text-xs uppercase px-3 py-1 border border-black shadow-[2px_2px_0_0_#fff]">
-                  Formal Education
+                  {t.education.formalEdu}
                 </span>
-                <span className="font-mono text-xs font-bold text-zinc-900">2019 – 2023</span>
+                <span className="font-mono text-xs font-bold text-zinc-900">{t.education.period}</span>
               </div>
               <h3 className="font-display font-black text-2xl sm:text-3xl uppercase text-black">
-                S1 Teknik Informatika
+                {t.education.degreeTitle}
               </h3>
               <h4 className="font-body font-bold text-lg text-zinc-900 mt-1 mb-3">
-                Universitas Muhammadiyah Surakarta
+                {t.education.university}
               </h4>
               <p className="font-body text-sm sm:text-base text-zinc-900 leading-relaxed bg-white p-4 border-2 border-black shadow-[3px_3px_0_0_#000]">
-                <strong>IPK 3.77 / 4.00 (Cum Laude).</strong> Tugas Akhir: Mengembangkan aplikasi web SI-BUMDES untuk manajemen layanan Wi-Fi desa digital (manajemen user, billing, pelaporan).
+                {t.education.details}
               </p>
             </div>
             <div className="mt-6 pt-3 border-t-2 border-black flex items-center justify-between text-xs font-mono font-black text-black">
-              <span>Degree: Sarjana Komputer (S.Kom)</span>
-              <span>Graduated 2023</span>
+              <span>{t.education.degreeFooter}</span>
+              <span>{t.education.graduated}</span>
             </div>
           </div>
 
@@ -635,30 +656,30 @@ export default function Home() {
             <div>
               <div className="flex items-center justify-between border-b-2 border-black pb-3 mb-4">
                 <span className="bg-black text-brutal-yellow font-display font-black text-xs uppercase px-3 py-1 border border-black shadow-[2px_2px_0_0_#ffe600]">
-                  Accreditations
+                  {t.education.accreditations}
                 </span>
-                <span className="font-mono text-xs font-bold text-zinc-900">20+ Certificates</span>
+                <span className="font-mono text-xs font-bold text-zinc-900">{t.education.certCount}</span>
               </div>
               <h3 className="font-display font-black text-2xl sm:text-3xl uppercase text-black">
-                AI &amp; Data Science Certifications
+                {t.education.certTitle}
               </h3>
               <h4 className="font-body font-bold text-lg text-zinc-900 mt-1 mb-3">
-                Komdigi • Dicoding • DQLab • RevoU
+                {t.education.certIssuers}
               </h4>
               <p className="font-body text-sm sm:text-base text-zinc-900 leading-relaxed bg-white p-4 border-2 border-black shadow-[3px_3px_0_0_#000]">
-                Completed 20+ specialized certifications in Generative AI, Deep Learning, Python Data Science, Cloud Computing, and Virtual Lab Linux.
+                {t.education.certSummary}
               </p>
             </div>
 
             <div className="mt-6 pt-4 border-t-2 border-black border-dashed flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <span className="font-mono text-xs font-black text-black">
-                Explore verifiable credentials
+                {t.education.exploreCredentials}
               </span>
               <Link
                 href="/certifications"
                 className="bg-black text-white font-display font-black text-xs sm:text-sm uppercase px-5 py-2.5 border-2 border-black shadow-[3px_3px_0_0_#ffe600] hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_#ffe600] active:translate-y-0.5 transition-all text-center inline-flex items-center justify-center gap-2"
               >
-                <span>Open Gallery</span>
+                <span>{t.education.openGallery}</span>
                 <span className="material-symbols-outlined text-base text-brutal-yellow">arrow_forward</span>
               </Link>
             </div>
@@ -674,147 +695,25 @@ export default function Home() {
           {/* Section Title */}
           <div className="flex items-center gap-3">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black uppercase bg-black text-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_#ff3399]">
-              04 // Selected Works
+              {`${t.projects.sectionNum} // ${t.projects.sectionTitle}`}
             </h2>
             <span className="h-[3px] flex-grow bg-black hidden sm:block"></span>
           </div>
 
           {/* Featured Project: Warehouse Management System */}
-          <div className="bg-white border-[3px] md:border-[4px] border-black p-6 sm:p-8 md:p-10 shadow-[8px_8px_0_0_#000] relative">
-            <div className="absolute -top-3.5 left-6 bg-brutal-yellow text-black border-2 border-black px-3.5 py-0.5 font-display font-black text-xs uppercase tracking-wider shadow-[2px_2px_0_0_#000] inline-flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-sm font-bold text-black">star</span>
-              <span>FEATURED ENTERPRISE PROJECT</span>
-            </div>
+          <WmsProject />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
-              
-              {/* Project Image Frame */}
-              <div className="lg:col-span-6 order-2 lg:order-1">
-                <div className="border-[3px] border-black bg-zinc-100 overflow-hidden shadow-[5px_5px_0_0_#000] group relative aspect-video">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Warehouse Management System Interface"
-                    src="/images/wms.png"
-                  />
-                  <div className="absolute top-2 right-2 bg-black text-brutal-lime-electric text-[11px] font-mono font-bold px-2.5 py-1 uppercase border border-white/40">
-                    Live System
-                  </div>
-                </div>
-              </div>
-
-              {/* Project Details */}
-              <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-4">
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-brutal-yellow border-2 border-black px-2.5 py-0.5 text-xs font-mono font-bold uppercase shadow-[2px_2px_0_0_#000]">Next.js</span>
-                  <span className="bg-brutal-cyan border-2 border-black px-2.5 py-0.5 text-xs font-mono font-bold uppercase shadow-[2px_2px_0_0_#000]">Golang</span>
-                  <span className="bg-brutal-lime-electric border-2 border-black px-2.5 py-0.5 text-xs font-mono font-bold uppercase shadow-[2px_2px_0_0_#000]">PostgreSQL</span>
-                </div>
-
-                <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl uppercase text-ink leading-tight">
-                  Warehouse Management System (WMS)
-                </h3>
-                <h4 className="font-body font-bold text-sm sm:text-base text-zinc-700">
-                  PT Reska Multi Usaha (KAI Services) Regional Office 04 Semarang
-                </h4>
-
-                <p className="font-body text-sm sm:text-base text-zinc-900 leading-relaxed bg-zinc-50 p-3.5 border-l-4 border-black">
-                  Enterprise-grade Warehouse Management System designed to digitize end-to-end warehouse logistics: real-time stock allocation, barcode scanning validation, shelf location mapping, and multi-tier inventory auditing.
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 pt-1">
-                  <div className="p-2.5 bg-brutal-yellow/30 border-2 border-black shadow-[2px_2px_0_0_#000]">
-                    <span className="block font-mono text-[10px] uppercase font-bold text-zinc-700">Role</span>
-                    <span className="font-display font-black text-xs sm:text-sm uppercase text-black">Full Stack Developer</span>
-                  </div>
-                  <div className="p-2.5 bg-brutal-lime-electric/40 border-2 border-black shadow-[2px_2px_0_0_#000]">
-                    <span className="block font-mono text-[10px] uppercase font-bold text-zinc-700">Status</span>
-                    <span className="font-display font-black text-xs sm:text-sm uppercase text-black">Production Live</span>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <span className="inline-flex items-center gap-2 bg-black text-white px-4 py-1.5 text-xs font-mono font-bold uppercase border-2 border-black shadow-[3px_3px_0_0_#ffe600]">
-                    <span className="material-symbols-outlined text-sm text-brutal-lime-electric">lock</span>
-                    <span>Internal Enterprise System</span>
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
+          {/* Featured Project: Resparking Pendapatan (Interactive Slider) */}
+          <ResparkingProject />
 
           {/* Grid of Other Works */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Card 2: Loko Cafe System Management */}
-            <div className="bg-white border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between group hover:-translate-y-1 transition-all">
-              <div>
-                <div className="border-2 border-black bg-zinc-100 overflow-hidden mb-4 shadow-[3px_3px_0_0_#000] aspect-[16/10] relative">
-                  <img
-                    className="w-full h-full object-contain p-2 bg-white transition-transform duration-500 group-hover:scale-105"
-                    alt="Loko Cafe System Management"
-                    src="/images/lsm.png"
-                  />
-                  <div className="absolute top-2 left-2 bg-brutal-yellow text-black text-[10px] font-mono font-bold px-2.5 py-0.5 border-2 border-black uppercase shadow-[2px_2px_0_0_#000]">
-                    F&amp;B Operations
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 mb-2.5">
-                  <span className="bg-brutal-yellow/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">Next.js</span>
-                  <span className="bg-brutal-cyan/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">Supabase</span>
-                  <span className="bg-brutal-lime-electric/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">AI Stickers</span>
-                </div>
-
-                <h3 className="font-display font-black text-xl uppercase leading-tight text-ink mb-2">
-                  Loko Cafe System Management
-                </h3>
-                
-                <p className="font-body text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                  Integrated operations platform for Loko Cafe outlets across Semarang Tawang &amp; Poncol: recipes, raw materials inventory, AI sticker label generation, and Trainmart POS data integration.
-                </p>
-              </div>
-
-              <div className="mt-5 pt-3 border-t-2 border-black border-dashed flex items-center justify-between text-xs font-mono font-bold">
-                <span className="text-zinc-700">PT Reska Multi Usaha</span>
-                <span className="bg-black text-white px-2 py-0.5 uppercase">Internal</span>
-              </div>
-            </div>
+            <LokoCafeProject />
 
             {/* Card 3: IRIS Industrial Relations Information System */}
-            <div className="bg-white border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between group hover:-translate-y-1 transition-all">
-              <div>
-                <div className="border-2 border-black bg-zinc-100 overflow-hidden mb-4 shadow-[3px_3px_0_0_#000] aspect-[16/10] relative">
-                  <img
-                    className="w-full h-full object-contain p-2 bg-white transition-transform duration-500 group-hover:scale-105"
-                    alt="IRIS System Interface"
-                    src="/images/iris.png"
-                  />
-                  <div className="absolute top-2 left-2 bg-brutal-cyan text-black text-[10px] font-mono font-bold px-2.5 py-0.5 border-2 border-black uppercase shadow-[2px_2px_0_0_#000]">
-                    HR &amp; Compliance
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 mb-2.5">
-                  <span className="bg-brutal-cyan/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">Next.js</span>
-                  <span className="bg-brutal-pink/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">Firebase</span>
-                  <span className="bg-brutal-yellow/30 border border-black px-2 py-0.5 text-[11px] font-mono font-bold">Compliance</span>
-                </div>
-
-                <h3 className="font-display font-black text-xl uppercase leading-tight text-ink mb-2">
-                  IRIS System (Industrial Relations)
-                </h3>
-                
-                <p className="font-body text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                  Centralized HR platform to manage employee relations workflows, transparent SP1–SP3 disciplinary procedures, and compliance tracking with real-time audit logs.
-                </p>
-              </div>
-
-              <div className="mt-5 pt-3 border-t-2 border-black border-dashed flex items-center justify-between text-xs font-mono font-bold">
-                <span className="text-zinc-700">KAI Services HR</span>
-                <span className="bg-black text-white px-2 py-0.5 uppercase">Internal</span>
-              </div>
-            </div>
+            <IrisProject />
 
             {/* Card 4: Web Portfolio 2026 */}
             <div className="bg-white border-[3px] md:border-[4px] border-black p-5 sm:p-6 shadow-[5px_5px_0_0_#000] flex flex-col justify-between group hover:-translate-y-1 transition-all">
@@ -826,7 +725,7 @@ export default function Home() {
                     src="/images/portofolio.png"
                   />
                   <div className="absolute top-2 left-2 bg-brutal-lime-electric text-black text-[10px] font-mono font-bold px-2.5 py-0.5 border-2 border-black uppercase shadow-[2px_2px_0_0_#000]">
-                    Portfolio
+                    {t.projects.portfolioTag}
                   </div>
                 </div>
 
@@ -837,16 +736,16 @@ export default function Home() {
                 </div>
 
                 <h3 className="font-display font-black text-xl uppercase leading-tight text-ink mb-2">
-                  Modern Portfolio Experience
+                  {t.projects.portfolioTitle}
                 </h3>
                 
                 <p className="font-body text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                  Personal engineering portfolio designed with vibrant, accessible Neo-Brutalism. Engineered with Next.js App Router, Tailwind CSS v4, and automated Agentic AI tools.
+                  {t.projects.portfolioDesc}
                 </p>
               </div>
 
               <div className="mt-5 pt-3 border-t-2 border-black border-dashed flex items-center justify-between text-xs font-mono font-bold">
-                <span className="text-zinc-700">Live Website</span>
+                <span className="text-zinc-700">{t.projects.portfolioBadge}</span>
                 <span className="bg-brutal-lime-electric text-black px-2 py-0.5 uppercase border border-black font-bold">Active</span>
               </div>
             </div>
@@ -862,7 +761,7 @@ export default function Home() {
           {/* Section Title */}
           <div className="flex items-center gap-3">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-black uppercase bg-black text-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0_0_#ffe600]">
-              05 // Engineering Principles
+              {`${t.principles.sectionNum} // ${t.principles.sectionTitle}`}
             </h2>
             <span className="h-[3px] flex-grow bg-black hidden sm:block"></span>
           </div>
@@ -874,10 +773,10 @@ export default function Home() {
               <div>
                 <span className="font-display font-black text-4xl sm:text-5xl text-black">01</span>
                 <h3 className="font-display font-black text-xl sm:text-2xl uppercase mt-2 mb-3 text-black">
-                  Reliability First
+                  {t.principles.p1Title}
                 </h3>
                 <p className="font-body text-sm sm:text-base font-bold text-zinc-950 leading-relaxed bg-white p-4 border-2 border-black shadow-[3px_3px_0_0_#000]">
-                  &quot;Code must be resilient and architectures clean. Fragile systems waste time; dependable systems build trust.&quot;
+                  &quot;{t.principles.p1Desc}&quot;
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black flex items-center gap-2 font-mono text-xs font-black uppercase text-black">
@@ -891,10 +790,10 @@ export default function Home() {
               <div>
                 <span className="font-display font-black text-4xl sm:text-5xl text-black">02</span>
                 <h3 className="font-display font-black text-xl sm:text-2xl uppercase mt-2 mb-3 text-black">
-                  Agentic Acceleration
+                  {t.principles.p2Title}
                 </h3>
                 <p className="font-body text-sm sm:text-base font-bold text-zinc-950 leading-relaxed bg-white p-4 border-2 border-black shadow-[3px_3px_0_0_#000]">
-                  &quot;AI is not a shortcut, it&apos;s leverage. Automate the repetitive boilerplate to focus deep attention on difficult engineering logic.&quot;
+                  &quot;{t.principles.p2Desc}&quot;
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black flex items-center gap-2 font-mono text-xs font-black uppercase text-black">
@@ -908,10 +807,10 @@ export default function Home() {
               <div>
                 <span className="font-display font-black text-4xl sm:text-5xl text-black">03</span>
                 <h3 className="font-display font-black text-xl sm:text-2xl uppercase mt-2 mb-3 text-black">
-                  High-Craft Performance
+                  {t.principles.p3Title}
                 </h3>
                 <p className="font-body text-sm sm:text-base font-bold text-zinc-950 leading-relaxed bg-white p-4 border-2 border-black shadow-[3px_3px_0_0_#000]">
-                  &quot;No unnecessary bloat. Fast loading, responsive layouts on all screens, and clear visual hierarchy always.&quot;
+                  &quot;{t.principles.p3Desc}&quot;
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t-2 border-black flex items-center gap-2 font-mono text-xs font-black uppercase text-black">
@@ -934,26 +833,38 @@ export default function Home() {
             <div className="lg:col-span-6 flex flex-col items-start gap-4">
               <span className="bg-[#057642] text-white font-display font-black text-xs uppercase px-3.5 py-1.5 border-2 border-white shadow-[2px_2px_0_0_#fff] inline-flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-200 animate-pulse"></span>
-                <span className="tracking-wide">#OpenToWork • Full-Time &amp; Projects</span>
+                <span className="tracking-wide">{t.contact.statusBadge}</span>
               </span>
               
               <h2 className="font-display text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white leading-none">
-                LET&apos;S BUILD <br />
-                <span className="text-brutal-yellow">SOMETHING LOUD.</span>
+                {lang === "en" ? (
+                  <>
+                    LET&apos;S BUILD <br />
+                    <span className="text-brutal-yellow">SOMETHING LOUD.</span>
+                  </>
+                ) : (
+                  <>
+                    MARI BANGUN <br />
+                    <span className="text-brutal-yellow">KARYA BERDAMPAK.</span>
+                  </>
+                )}
               </h2>
 
               <p className="font-body text-sm sm:text-base text-zinc-300 max-w-lg leading-relaxed">
-                Whether you need a reliable Full Stack Engineer, IT Infrastructure Support, or Agentic AI automation consulting, my inbox is always open.
+                {t.contact.subheadline}
               </p>
 
               <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href="mailto:naufalfaruq285@gmail.com"
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
                   className="bg-brutal-yellow text-black font-display font-black text-sm sm:text-base uppercase px-6 py-3.5 border-2 border-white shadow-[4px_4px_0_0_#fff] hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#fff] active:translate-y-0.5 transition-all inline-flex items-center gap-2 cursor-pointer"
                 >
-                  <span className="material-symbols-outlined text-lg">mail</span>
-                  <span>Send Email</span>
-                </a>
+                  <span className="material-symbols-outlined text-lg">
+                    {copied ? "check" : "mail"}
+                  </span>
+                  <span>{copied ? t.contact.copied : t.contact.copyEmail}</span>
+                </button>
 
                 <a
                   href="https://www.linkedin.com/in/muhammad-naufal-faruq"
@@ -970,16 +881,19 @@ export default function Home() {
             {/* Right Column: Direct Contact Grid */}
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               
-              <a
-                href="mailto:naufalfaruq285@gmail.com"
-                className="bg-zinc-900 border-2 border-zinc-700 p-4 hover:border-brutal-yellow hover:bg-zinc-800 transition-all flex flex-col justify-between shadow-[3px_3px_0_0_#ffe600]"
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="bg-zinc-900 border-2 border-zinc-700 p-4 hover:border-brutal-yellow hover:bg-zinc-800 transition-all flex flex-col justify-between shadow-[3px_3px_0_0_#ffe600] text-left cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs text-zinc-400 uppercase font-bold">Email</span>
+                  <span className="font-mono text-xs text-zinc-400 uppercase font-bold">
+                    {copied ? t.contact.copied : "Email (Click to Copy)"}
+                  </span>
                   <span className="material-symbols-outlined text-brutal-yellow text-2xl">mail</span>
                 </div>
                 <span className="font-display font-bold text-sm text-white truncate">naufalfaruq285@gmail.com</span>
-              </a>
+              </button>
 
               <a
                 href="https://www.linkedin.com/in/muhammad-naufal-faruq"
@@ -1009,7 +923,9 @@ export default function Home() {
 
               <div className="bg-zinc-900 border-2 border-zinc-700 p-4 flex flex-col justify-between shadow-[3px_3px_0_0_#ff3399]">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs text-zinc-400 uppercase font-bold">Location</span>
+                  <span className="font-mono text-xs text-zinc-400 uppercase font-bold">
+                    {lang === "en" ? "Location" : "Lokasi"}
+                  </span>
                   <span className="material-symbols-outlined text-brutal-pink text-2xl">pin_drop</span>
                 </div>
                 <span className="font-display font-bold text-sm text-white truncate">Pekalongan / Semarang</span>
@@ -1026,31 +942,31 @@ export default function Home() {
       {/* FOOTER */}
       {/* ========================================================================= */}
       <footer className="bg-white border-t-[3px] md:border-t-[4px] border-black py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="w-full max-w-[1720px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           
           <div className="flex items-center gap-3">
             <span className="font-display font-black text-lg uppercase bg-brutal-yellow px-2.5 py-0.5 border-2 border-black shadow-[2px_2px_0_0_#000]">
               NPL DEV
             </span>
             <span className="font-mono text-xs text-zinc-700 font-bold">
-              © 2026 Muhammad Naufal Faruq
+              © 2026 Muhammad Naufal Faruq • {t.footer.rights}
             </span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-display font-bold uppercase">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#system-info" className="hover:underline">Skills</a>
-            <a href="#experience" className="hover:underline">Experience</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            <Link href="/certifications" className="hover:underline">Certifications</Link>
-            <a href="#contact" className="hover:underline">Contact</a>
+            <a href="#about" className="hover:underline">{t.nav.about}</a>
+            <a href="#system-info" className="hover:underline">{t.nav.skills}</a>
+            <a href="#experience" className="hover:underline">{t.nav.experience}</a>
+            <a href="#projects" className="hover:underline">{t.nav.projects}</a>
+            <Link href="/certifications" className="hover:underline">{t.nav.certifications}</Link>
+            <a href="#contact" className="hover:underline">{t.nav.contact}</a>
           </div>
 
           <a
             href="#"
             className="font-display font-black text-xs uppercase bg-black text-white px-3 py-1.5 border-2 border-black shadow-[2px_2px_0_0_#ffe600] hover:bg-zinc-800 active:translate-y-0.5 transition-all inline-flex items-center gap-1 cursor-pointer"
           >
-            <span>Top</span>
+            <span>{t.footer.backToTop}</span>
             <span className="material-symbols-outlined text-sm">arrow_upward</span>
           </a>
         </div>

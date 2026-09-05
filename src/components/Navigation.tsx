@@ -3,11 +3,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
+import LanguageSwitch from "@/components/LanguageSwitch";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const isCertificationsPage = pathname === "/certifications";
+  const { lang } = useLanguage();
+  const t = translations[lang];
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -22,18 +27,18 @@ export default function Navigation() {
   }, [isOpen]);
 
   const navLinks = [
-    { name: "About", href: isCertificationsPage ? "/#about" : "#about" },
-    { name: "Skills", href: isCertificationsPage ? "/#system-info" : "#system-info" },
-    { name: "Experience", href: isCertificationsPage ? "/#experience" : "#experience" },
-    { name: "Projects", href: isCertificationsPage ? "/#projects" : "#projects" },
-    { name: "Certifications", href: "/certifications" },
-    { name: "Contact", href: isCertificationsPage ? "/#contact" : "#contact" },
+    { name: t.nav.about, href: isCertificationsPage ? "/#about" : "#about" },
+    { name: t.nav.skills, href: isCertificationsPage ? "/#system-info" : "#system-info" },
+    { name: t.nav.experience, href: isCertificationsPage ? "/#experience" : "#experience" },
+    { name: t.nav.projects, href: isCertificationsPage ? "/#projects" : "#projects" },
+    { name: t.nav.certifications, href: "/certifications" },
+    { name: t.nav.contact, href: isCertificationsPage ? "/#contact" : "#contact" },
   ];
 
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-white border-b-[3px] md:border-b-[4px] border-black shadow-[0_4px_0_0_#000]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+        <div className="w-full max-w-[1720px] 2xl:max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 h-16 md:h-20 flex items-center justify-between">
           {/* Logo & Live Status */}
           <div className="flex items-center gap-3">
             <Link
@@ -45,7 +50,7 @@ export default function Navigation() {
 
             <div className="hidden sm:flex items-center gap-2 bg-[#057642] text-white px-3 py-1 text-xs font-display font-black uppercase border-2 border-black tracking-wider shadow-[2px_2px_0_0_#000] hover:scale-105 transition-transform">
               <span className="w-2 h-2 rounded-full bg-emerald-200 animate-pulse"></span>
-              <span>#OpenToWork</span>
+              <span>{t.nav.openToWork}</span>
             </div>
           </div>
 
@@ -71,6 +76,9 @@ export default function Navigation() {
 
           {/* Desktop CTA Action Group */}
           <div className="hidden sm:flex items-center gap-3">
+            {/* Language Switcher */}
+            <LanguageSwitch />
+
             <a
               href="/CV-Muhammad-Naufal-Faruq.pdf"
               target="_blank"
@@ -85,13 +93,15 @@ export default function Navigation() {
               href={isCertificationsPage ? "/#contact" : "#contact"}
               className="font-display font-black text-xs md:text-sm uppercase bg-black text-white px-4 py-2 border-[2.5px] border-black shadow-[3px_3px_0_0_#ffe600] hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0_#ffe600] active:translate-y-0.5 active:shadow-[1px_1px_0_0_#ffe600] transition-all inline-flex items-center gap-1.5"
             >
-              <span>Hire Me</span>
+              <span>{t.nav.hireMe}</span>
               <span className="material-symbols-outlined text-base text-brutal-yellow">arrow_forward</span>
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle & Controls Button */}
           <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitch />
+
             <a
               href="/CV-Muhammad-Naufal-Faruq.pdf"
               target="_blank"
@@ -131,9 +141,12 @@ export default function Navigation() {
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-200">Status</span>
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-200 animate-pulse"></span>
-                <span className="text-xs font-display font-black uppercase text-white tracking-wide">#OpenToWork (Full-Time &amp; Projects)</span>
+                <span className="text-xs font-display font-black uppercase text-white tracking-wide">{t.nav.openToWork} (Full-Time &amp; Projects)</span>
               </div>
             </div>
+
+            {/* Mobile Language Switcher Row */}
+            <LanguageSwitch isMobile />
 
             {/* Links */}
             <nav className="flex flex-col gap-2.5">
@@ -172,7 +185,7 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className="w-full py-3 px-4 text-center font-display font-black text-base uppercase bg-black text-white border-[2.5px] border-black shadow-[3px_3px_0_0_#ffe600] active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2"
               >
-                <span>Let&apos;s Connect</span>
+                <span>{t.nav.hireMe}</span>
                 <span className="material-symbols-outlined text-lg text-brutal-yellow">rocket_launch</span>
               </a>
             </div>
