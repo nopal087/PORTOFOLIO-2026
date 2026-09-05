@@ -949,7 +949,7 @@ export default function Home() {
               NPL DEV
             </span>
             <span className="font-mono text-xs text-zinc-700 font-bold">
-              © 2026 Muhammad Naufal Faruq • {t.footer.rights}
+              © 2026 Muhammad Naufal Faruq
             </span>
           </div>
 

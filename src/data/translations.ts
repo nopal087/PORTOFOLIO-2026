@@ -353,7 +353,7 @@ export const translations: Record<"en" | "id", Translations> = {
     },
     footer: {
       designedBy: "Designed & Built by Muhammad Naufal Faruq.",
-      rights: "All rights reserved. Neo-Brutalism Web Portfolio.",
+      rights: "",
       builtWith: "Next.js • Tailwind CSS • TypeScript • Agentic AI",
       backToTop: "Back to Top",
     },
@@ -556,7 +556,7 @@ export const translations: Record<"en" | "id", Translations> = {
     },
     footer: {
       designedBy: "Dirancang & Dibangun oleh Muhammad Naufal Faruq.",
-      rights: "Hak Cipta Dilindungi. Portofolio Web Neo-Brutalism.",
+      rights: "",
       builtWith: "Next.js • Tailwind CSS • TypeScript • Agentic AI",
       backToTop: "Kembali ke Atas",
     },

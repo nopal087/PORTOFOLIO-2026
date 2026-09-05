@@ -110,7 +110,7 @@ export default function CertificationsPage() {
               NPL DEV
             </span>
             <span className="font-mono text-xs text-zinc-700 font-bold">
-              © 2026 Muhammad Naufal Faruq • All rights reserved
+              © 2026 Muhammad Naufal Faruq
             </span>
           </div>
 
